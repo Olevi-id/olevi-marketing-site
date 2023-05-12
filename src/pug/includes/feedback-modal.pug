@@ -1,0 +1,38 @@
+// Feedback Modal
+
+#feedbackModal.modal.fade(tabindex='-1', aria-labelledby='feedbackModalLabel', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header.bg-gradient-primary-to-secondary.p-4
+                h5#feedbackModalLabel.modal-title.font-alt.text-white Yhteydenotto
+                button.btn-close.btn-close-white(type='button' data-bs-dismiss='modal', aria-label='Close')
+            .modal-body.border-0.p-4
+
+                form#contactForm
+                    p
+                        | Tällä lomakkeella voit lähettää meille viestin. Jos haluat, että sinuun otetaan yhteyttä, kirjoita viestiin yhteystietosi.
+                    p
+                        | Viestin yhteyteen liitetään tunnistetietoina IP-osoitteesi ja selaimesi lähettämät otsaketiedot. Jos et halua lähettää meille henkilötietojasi, älä syötä niitä lomakkeelle ja älä lähetä viestiä.
+                    form-floating.mb-3
+                        textarea.form-control#message(
+                            type='test',
+                            placeholder='Kirjoita viestisi tähän',
+                            style='height: 10rem',
+                            data-sb-validations='required'
+                        )
+                        div.invalid-feedback(
+                            data-sb-feedback='message:required'
+                        )
+                            | Viesti on kirjoitettava ennen lähettämistä
+                        .d-grid
+                            button.btn.btn-primary.rounded-pill.btn-xl#submitButton(
+                                type='submit'
+                            ) Lähetä viesti ja henkilötiedot
+
+
+                    // Submit error message
+                    //
+                    // This is what your users will see when there is
+                    // an error submitting the form
+                    #submitErrorMessage.d-none
+                        .text-center.text-danger.mb-3 Virhe!
