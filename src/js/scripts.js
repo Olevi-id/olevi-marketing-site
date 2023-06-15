@@ -45,7 +45,7 @@ $('#submitButton').on('click', function(event) {
     $('#contactModalText').text('Odota hetki...');
     $.post('https://europe-west1-klaalo-1162.cloudfunctions.net/formMailer2nd',
       { message: $('#message').val(),
-                flavor: 'karidea'
+                flavor: 'olevi'
              }, function(data) {
         if (data.status == 'sent') {
           $('textarea').val(data.message);
