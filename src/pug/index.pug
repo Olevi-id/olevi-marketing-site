@@ -81,31 +81,31 @@ html(lang='en')
                         .container-fluid.px-5
                             .row.gx-5.align-items-center.my-4
                                 .col-md-6.mb-5
-                                    // Feature item
-                                    .text-center
-                                        i.bi-fingerprint.icon-feature.text-gradient.d-block.mb-3
-                                        h3.font-alt Sormenjälkitunnistus
+                                    .row.mb-4.border.rounded.shadow-sm.align-items-center.text-center(style='height: 100px')
+                                            i.bi-fingerprint.icon-feature.text-gradient.d-block
+                                    .row.text-center
+                                            h3.font-alt Sormenjälkitunnistus
                                 .col-md-6.mb-5
-                                    // Feature item
-                                    .text-center
-                                        img(src='/assets/img/faceid.png' width='50px').mb-4.mt-4
-                                        h3.font-alt Kasvotunnistus
-                            .row.gx-5.align-items-center.my-4
-                                .col-md-6.mb-5.mb-md-0
-                                    // Feature item
-                                    .text-center
-                                        img(src='/assets/img/hightrust-logo.png' width='150px')
+                                    .row.mb-4.border.rounded.shadow-sm.align-items-center.text-center(style='height: 100px')
+                                        .col-12.text-center
+                                            img(src='/assets/img/faceid.png', style='height: 60px;')
+                                    .row.text-center
+                                            h3.font-alt Kasvotunnistus
+                                .col-md-6.mb-5
+                                    .row.mb-4.border.rounded.shadow-sm.align-items-center.text-center(style='height: 100px;')
+                                        img(src='/assets/img/hightrust-logo.png', style='height: 35px; width: auto; margin: auto;')
+                                    .row.text-center
                                         h3.mt-3.font-alt Henkilö- ja Sote-kortti
-                                .col-md-6
-                                    // Feature item
-                                    .text-center
-                                        p.mb-3.fs-4.fw-bold FTN
+                                .col-md-6.mb-5
+                                    .row.mb-4.border.rounded.shadow-sm.align-items-center.text-center(style='height: 100px;')
+                                        p.fs-4.fw-bold FTN
+                                    .row.text-center
                                         h3.font-alt Pankkitunnistus
                             .row.justify-content-center.gx-5.align-items-center.my-4
-                                .col-md-6.mb-5.mb-md-0.mt-5
-                                    // Feature item
-                                    .text-center
-                                        img(src='/assets/img/fido2.png' width='70px')
+                                .col-md-6
+                                    .row.mb-4.border.rounded.shadow-sm.align-items-center.text-center(style='height: 100px;')
+                                        img(src='/assets/img/fido2.png', style='height: 35px; width: auto; margin: auto;')
+                                    .row.text-center
                                         h3.mt-3.font-alt Fido2-tunnistaminen
 
         section.bg-light
