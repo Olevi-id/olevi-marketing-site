@@ -8,6 +8,7 @@ module.exports = function renderAssets() {
     let destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
     
     sh.cp('-R', sourcePath, destPath)
+    sh.cp(sourcePath + '/favicon.ico', './dist/');
 
     sourcePath = upath.resolve(upath.dirname(__filename), '../src/font');
     destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
