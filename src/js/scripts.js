@@ -43,7 +43,7 @@ $('#submitButton').on('click', function(event) {
     $('#contactModalText').addClass('lead');
     $('#contactModalText').empty();
     $('#contactModalText').text('Odota hetki...');
-    $.post('https://europe-west1-klaalo-1162.cloudfunctions.net/formMailer2nd',
+    $.post('https://closely-accepted-wolf.ngrok-free.app/send',
       { message: $('#message').val(),
                 flavor: 'olevi'
              }, function(data) {
