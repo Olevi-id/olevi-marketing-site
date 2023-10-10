@@ -69,7 +69,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 3.4 The Customer provides first tier of support for its end users. The Reseller provides the second tier of support for the Customer. The Company provides the third tier of support for the Customer. The Reseller will escalate support requests and Feature Requests to the Company by its own discretion. Neither the Reseller nor the Company will provide first tier support to end users.
 
-3.5 The Company will hold an inventory of instances the Customers are running on quantity and version level to be able to provide support. The Customer is required to report the Company of the instances that the Software is being run on in order to receive support from the Company. The report shall entail the quantity of instances running in a given time period and installed versions of the Software on those instances. The Company can not provide support without version information of the Software that the Customer is running.
+3.5 The Company will hold an inventory of Instances the Customers are running on level of names, quantities and version numbers to be able to uniquely differentiate Instances from other Instances and to provide support. The Customer is required to report the Company of the Instances that the Software is being run on in order to receive support from the Company. The report shall entail the names and quantities of Instances running in a given time period and installed versions of the Software on those instances. The Company can not provide support without version information of the Software that the Customer is running.
 
 
 ## 4 WARRANTIES
