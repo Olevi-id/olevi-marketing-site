@@ -1,6 +1,6 @@
 # Olevi Software Subscription License Terms
 
-> Version 2023-06-22
+> Version 2023-10-10
 
 These Olevi Software Subscription License Terms ("License Terms") relate to software subscription agreement ("Agreement") entered into between Olevi Oy ("Company") and the Customer (as defined in the Agreement). These License Terms MUST be applied when granting a License to the Core Software ("Core"), Modules ("Module") and Updates as provided in the Agreement.
 
@@ -20,6 +20,8 @@ These license Terms were originally published digitally in text format. Any poss
 "The Modules", "the Module" in plural or singular refers to a piece of software that is part of or connected to Olevi Software implementation work created and/or owned by the Company. A Module can be used as part of the Core Software implementation or as independent product or piece of software within an implementation or deployment.
 
 "The Updates" refers to change in the Software where previous or older version or versions of the Software code will be brought current from its previous state providing possibly but not necessarily e.g. new features, improvements or fixes to previously implemented features or security improvements or fixes to possibly found limitations or issues in the security of the Software. 
+
+"An Instance" refers to a server that is running the Software. When the Software is being run on a cluster environment where multiple nodes may be joined to provide a service, an Instance refers to a logical service component rather than number of nodes or CPU cores that are needed to run the instance.
 
 "The Company" refers to Olevi Oy company that owns, sells and grants rights and permissions to use the Software. The Company develops and manages intellectual property and the Software that it has created or owns.
 
@@ -66,6 +68,9 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 3.3 During the Subscription Period the Customer MAY express requests to the Company for new features to be implemented to the Software. These requests are referred to as Feature Requests. When received and acknowledged by the Company, the Company takes Feature Requests into consideration and after approval by the Company they are added to the queue of Feature Requests in addition to other unfinished tasks and work items for the Company in the order they were approved. The Company reserves the right to prioritise the queue by its own discretion, but also based on payments by the Customer or other Customers to expedite implementation of any given Feature Request or work item in the queue. Severe security issues take precedence to any other work item in the queue regardless of other items in the queue or status of the queue. Security related tasks are added in front of the queue after they have been analysed and accepted by the Company. Feature Requests are considered public in nature if not explicitly and specifically otherwise agreed and acknowledged by the Company in written form. 
 
 3.4 The Customer provides first tier of support for its end users. The Reseller provides the second tier of support for the Customer. The Company provides the third tier of support for the Customer. The Reseller will escalate support requests and Feature Requests to the Company by its own discretion. Neither the Reseller nor the Company will provide first tier support to end users.
+
+3.5 The Company will hold an inventory of instances the Customers are running on quantity and version level to be able to provide support. The Customer is required to report the Company of the instances that the Software is being run on in order to receive support from the Company. The report shall entail the quantity of instances running in a given time period and installed versions of the Software on those instances. The Company can not provide support without version information of the Software that the Customer is running.
+
 
 ## 4 WARRANTIES
 
