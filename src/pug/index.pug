@@ -35,11 +35,17 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
                         li.nav-item
-                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
-                                i.bi-box-arrow-up-right &nbsp; Demo
-                        li.nav-item
-                            a.nav-link.me-lg-3(href='https://doc.olevi.fi')
-                                i.bi-box-arrow-up-right &nbsp; Dokumentaatio
+                            div.dropdown
+                                button.btn.dropdown-toggle(type='button',data-bs-toggle='dropdown',aria-expanded='false') Lisätietoa Olevista
+                                ul.dropdown-menu
+                                    li
+                                        a.nav-link.me-lg-3(href='https://misc.olevi.fi/Olevi-brandbook-short-1.0.pdf') Esite
+                                    li
+                                        a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                                            i.bi-box-arrow-up-right &nbsp; Demo
+                                    li
+                                        a.nav-link.me-lg-3(href='https://doc.olevi.fi')
+                                            i.bi-box-arrow-up-right &nbsp; Dokumentaatio
                     button.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#feedbackModal')
                         span.d-flex.align-items-center
                             i.bi-chat-text-fill.me-2
