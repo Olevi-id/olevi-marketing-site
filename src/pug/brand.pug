@@ -1,0 +1,121 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Olevi - se helppo suomalainen tunnistuspalvelu')
+        meta(name='author', content='Olevi')
+
+        title Olevi tunnistuspalvelu
+
+        link(rel='icon', type='image/x-icon', href='assets/olevi-maskicon.svg')
+        link(rel='mask-icon' href='assets/olevi-maskicon.svg' color='black')
+
+        // Bootstrap icons
+        link(href='/font/bootstrap-icons.css', rel='stylesheet')
+        //link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css', rel='stylesheet')
+
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
+
+        style .my-text-light { font-weight: 200; }
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
+            .container.px-5
+                a.navbar-brand.fw-bold(href='/') Olevi tunnistuspalvelu
+                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.bi-list
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
+                        li.nav-item
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                                i.bi-box-arrow-up-right &nbsp; Demo
+                        li.nav-item
+                            div.dropdown
+                                button.btn.dropdown-toggle(type='button',data-bs-toggle='dropdown',aria-expanded='false') Lisätietoa Olevista
+                                ul.dropdown-menu
+                                    li
+                                        a.nav-link.me-lg-3(href='https://misc.olevi.fi/Olevi-brandbook-short-1.0.pdf') Esite
+                                    li
+                                        a.nav-link.me-lg-3(href='brand.html') Tuotemerkki (brändi)
+                                    li
+                                        a.nav-link.me-lg-3(href='https://doc.olevi.fi')
+                                            i.bi-box-arrow-up-right &nbsp; Dokumentaatio
+                    button.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#feedbackModal')
+                        span.d-flex.align-items-center
+                            i.bi-chat-text-fill.me-2
+                            span.small Yhteydenotto
+
+        // Mashead header
+        header.masthead
+            .container.px-5
+                .row
+                    .col-12
+                        // Mashead text and app badges
+                        .mb-5.mb-lg-0.text-center.text-lg-start
+                            h1.display-1.lh-1.mb-5 Olevi
+                            p.lead.fw-normal.mb-3 Tuotemerkki
+                    .col-8
+                        p Olevin nimen, tunnuksen ja muun tuotemerkkiin liittyvän materiaalin käytöstä on tehty erillinen ohjeisto. Tältä sivulta ja Olevin brändikirjasta löydät kaiken tarvittavan tiedon Olevin tuotemerkin käyttämiseksi.
+                        p Brändikirjasta on kaksi versiota. Löydät linkin brändikirjan lyhyeen versioon myös web-sivujen yläpalkista kohdasta
+                            i "Lisätietoa Olevista"
+                        dl
+                            dt
+                                a(href='https://misc.olevi.fi/Olevi-brandbook-short-1.0.pdf') Brändikirja (lyht versio)
+                            dd Brändikirjan lyhyt versio toimii samalla Olevin esitteenä. Kirjasesta voi tilata painetun version. Se sisältää kaiken tarvittavan tiedon, jota uusi asiakas tarvitsee ymmärtääkseen Olevin tuotteena.
+                            dt
+                                a(href='https://misc.olevi.fi/OLEVI-BRANDBOOK-1.1.pdf') Brändikirja ja tuotemerkkiohjeisto
+                            dd Pidempi versio brändikirjasta sisältää ohjeet Olevin nimen, tunnuksen ja muun tuotemerkkiin liittyvän materiaalin käytöstä
+                    .col-8
+                            p.lead.fw-normal.mb-3 Logot
+                    .col-8
+                            p Katso tarkempi ohjeistus logojen käytöstä Brändikirjasta. Alla löydät linkkilistan Brändikirjassa viitattaviin Olevin logoihin.
+                            ul
+                                li 
+                                    a(href='https://misc.olevi.fi/OLEVI-LOGOT-2023/Olevi_musta.png') Olevi_musta.png
+                                li 
+                                    a(href='https://misc.olevi.fi/OLEVI-LOGOT-2023/Olevi_musta.svg') Olevi_musta.svg
+                                li 
+                                    a(href='https://misc.olevi.fi/OLEVI-LOGOT-2023/Olevi_valkoinen.png') Olevi_valkoinen.png
+                                li 
+                                    a(href='https://misc.olevi.fi/OLEVI-LOGOT-2023/Olevi_valkoinen.svg') Olevi_valkoinen.svg
+                                li 
+                                    a(href='https://misc.olevi.fi/OLEVI-LOGOT-2023/Olevi-favicon_musta.png') Olevi-favicon_musta.png
+                                li 
+                                    a(href='https://misc.olevi.fi/OLEVI-LOGOT-2023/Olevi-favicon_musta.svg') Olevi-favicon_musta.svg
+                                li 
+                                    a(href='https://misc.olevi.fi/OLEVI-LOGOT-2023/Olevi-favicon_valkoinen.png') Olevi-favicon_valkoinen.png
+                                li 
+                                    a(href='https://misc.olevi.fi/OLEVI-LOGOT-2023/Olevi-favicon_valkoinen.svg') Olevi-favicon_valkoinen.svg
+
+
+        // Footer
+        footer.bg-black.text-center.py-5
+            .container.px-5
+                .text-white-50.small
+                    .mb-2 Olevi Oy | Y-tunnus:
+                        a(href='https://tietopalvelu.ytj.fi/yritys/3371637-1') 3371637-1 |
+                        a(href='tietosuoja.html').link-underline-primary Tietosuoja |
+                        a(href='Olevi-License-Terms.md') License Terms |
+                        | Tehty suomessa
+                    //-span.mx-1 &middot;
+                    //-a(href='#!') Terms
+                    //-span.mx-1 &middot;
+                    //-a(href='#!') FAQ
+        
+        include includes/feedback-modal.pug
+
+        script(src='/js/jquery.min.js')
+        // Bootstrap core JS
+        script(src='/js/popper.min.js')
+        script(src='/js/bootstrap.bundle.min.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')
