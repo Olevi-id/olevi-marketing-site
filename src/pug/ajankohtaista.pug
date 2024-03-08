@@ -1,0 +1,110 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Olevi - se helppo suomalainen tunnistuspalvelu')
+        meta(name='author', content='Olevi')
+
+        title Olevi tunnistuspalvelu
+
+        link(rel='icon', type='image/x-icon', href='assets/olevi-maskicon.svg')
+        link(rel='mask-icon' href='assets/olevi-maskicon.svg' color='black')
+
+        // Bootstrap icons
+        link(href='/font/bootstrap-icons.css', rel='stylesheet')
+        //link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css', rel='stylesheet')
+
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
+
+        style .my-text-light { font-weight: 200; }
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
+            .container.px-5
+                a.navbar-brand.fw-bold(href='/') Olevi tunnistuspalvelu
+                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.bi-list
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
+                        li.nav-item
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                                i.bi-box-arrow-up-right &nbsp; Demo
+                        li.nav-item
+                            div.dropdown
+                                button.btn.dropdown-toggle(type='button',data-bs-toggle='dropdown',aria-expanded='false') Lisätietoa Olevista
+                                ul.dropdown-menu
+                                    li
+                                        a.nav-link.me-lg-3(href='ajankohtaista.html') Ajankohtaista
+                                    li
+                                        a.nav-link.me-lg-3(href='https://misc.olevi.fi/Olevi-brandbook-short-1.0.pdf') Esite
+                                    li
+                                        a.nav-link.me-lg-3(href='brand.html') Tuotemerkki (brändi)
+                                    li
+                                        a.nav-link.me-lg-3(href='https://doc.olevi.fi')
+                                            i.bi-box-arrow-up-right &nbsp; Dokumentaatio
+                    button.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#feedbackModal')
+                        span.d-flex.align-items-center
+                            i.bi-chat-text-fill.me-2
+                            span.small Yhteydenotto
+
+
+
+
+        header.masthead
+            .container.px-5
+                .row.gx-5.align-items-center
+                    .col-lg-6
+                        .row.justify-content-center
+                            .col-12
+                                // Mashead text and app badges
+                                .mb-lg-0.text-center.text-lg-start
+                                    h1.display-1.lh-1.mb-3 Olevi - ajankohtaista
+                                    p.lead.fw-normal.text-muted Viimeisimmät uutiset Olevista
+
+        section.bg-light.px-5
+            .container
+            .row.align-items-center.justify-content-center
+                .col-8
+                    ul
+                        li
+                            a(href='news/20240308-olevi-vorna.html') 8.3.2024 - Olevi + Vorna ID for Business Customer IAM
+
+
+
+
+        // App badge section
+        section#download.bg-gradient-primary-to-secondary
+            .container.px-5
+                h2.text-center.text-white.mb-4 Helpompaa tunnistamista jo tänään
+
+        // Footer
+        footer.bg-black.text-center.py-5
+            .container.px-5
+                .text-white-50.small
+                    .mb-2 Olevi Oy | Y-tunnus:
+                        a(href='https://tietopalvelu.ytj.fi/yritys/3371637-1') 3371637-1 |
+                        a(href='tietosuoja.html').link-underline-primary Tietosuoja |
+                        a(href='Olevi-License-Terms.md') License Terms |
+                        | Tehty suomessa
+                    //-span.mx-1 &middot;
+                    //-a(href='#!') Terms
+                    //-span.mx-1 &middot;
+                    //-a(href='#!') FAQ
+        
+        include includes/feedback-modal.pug
+
+        script(src='/js/jquery.min.js')
+        // Bootstrap core JS
+        script(src='/js/popper.min.js')
+        script(src='/js/bootstrap.bundle.min.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')
