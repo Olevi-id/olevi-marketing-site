@@ -5,32 +5,59 @@
 #mainNav {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: $white;
+    background-color: $kirkasJarvi;
 
     .navbar-brand {
         &:hover,
         &:active {
-            color: $primary;
+            color: $valkoinenGraniitti;
         }
     }
 
     .navbar-toggler {
         font-size: $font-size-sm;
         padding: 0.75rem 1rem;
-        color: $gray-900;
+        color: $valkoinenGraniitti;
     }
 
     .navbar-nav {
         .nav-item {
             .nav-link {
-                color: $gray-900;
+                color: $valkoinenGraniitti;
                 &:hover {
-                    color: $gray-600;
+                    color: $valkoinenGraniitti;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    text-decoration-color: $koivunKevatLehdet;
                 }
                 &.active {
                     color: $primary;
                 }
             }
+        }
+    }
+
+    .nav-item .dropdown button {
+        border-style: solid;
+        border-color: $valkoinenGraniitti;
+        color: $valkoinenGraniitti;
+        &:hover {
+            box-shadow: rgb(231, 230, 230) 2px 2px;
+            background-color: #2a01cc;
+        }
+        &:active {
+            box-shadow: #4c20fc 2px 2px;
+            background-color: #120059;
+        }
+    }
+    .nav-item .dropdown-menu {
+        background-color: $kirkasJarvi;
+        border-color: $valkoinenGraniitti;
+
+        li:hover {
+            text-decoration: underline;
+            font-weight: bold;
+            color: $koivunKevatLehdet;
         }
     }
 }

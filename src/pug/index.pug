@@ -10,25 +10,28 @@ html(lang='en')
 
         title Olevi tunnistuspalvelu
 
-        link(rel='icon', type='image/x-icon', href='assets/olevi-maskicon.svg')
-        link(rel='mask-icon' href='assets/olevi-maskicon.svg' color='black')
+        link(rel="apple-touch-icon",sizes="180x180",href="https://misc.olevi.fi/assets/icon/apple-touch-icon.png")
+        link(rel="icon",type="image/png",sizes="32x32",href="https://misc.olevi.fi/assets/icon/favicon-32x32.png")
+        link(rel="icon",type="image/png",sizes="16x16",href="https://misc.olevi.fi/assets/icon/favicon-16x16.png")
+        link(rel="manifest",href="/site.webmanifest")
+        link(rel="mask-icon",href="https://misc.olevi.fi/assets/icon/safari-pinned-tab.svg",color="#5bbad5")
+        meta(name="msapplication-TileColor",content="#da532c")
+        meta(name="theme-color",content="#ffffff")
+
 
         // Bootstrap icons
         link(href='/font/bootstrap-icons.css', rel='stylesheet')
-        //link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css', rel='stylesheet')
-
 
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
-
-        style .my-text-light { font-weight: 200; }
 
     body#page-top
 
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
             .container.px-5
-                a.navbar-brand.fw-bold(href='#page-top') Olevi tunnistuspalvelu
+                a.navbar-brand.fw-bold(href='#page-top')
+                    img(src='https://misc.olevi.fi/assets/logo/Olevi-logo-white.svg', height="40px")
                 button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.bi-list
@@ -42,15 +45,15 @@ html(lang='en')
                                 button.btn.dropdown-toggle(type='button',data-bs-toggle='dropdown',aria-expanded='false') Lisätietoa Olevista
                                 ul.dropdown-menu
                                     li
-                                        a.nav-link.me-lg-3(href='ajankohtaista.html') Ajankohtaista
-                                    li
                                         a.nav-link.me-lg-3(href='https://misc.olevi.fi/Olevi-brandbook-short-1.0.pdf') Esite
                                     li
                                         a.nav-link.me-lg-3(href='brand.html') Tuotemerkki (brändi)
                                     li
+                                        a.nav-link.me-lg-3(href='tietosuoja.html') Tietosuoja
+                                    li
                                         a.nav-link.me-lg-3(href='https://doc.olevi.fi')
                                             i.bi-box-arrow-up-right &nbsp; Dokumentaatio
-                    button.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#feedbackModal')
+                    button.btn.btn-olevi.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#feedbackModal')
                         span.d-flex.align-items-center
                             i.bi-chat-text-fill.me-2
                             span.small Yhteydenotto
@@ -64,20 +67,55 @@ html(lang='en')
                             .col-12
                                 // Mashead text and app badges
                                 .mb-5.mb-lg-0.text-center.text-lg-start
-                                    h1.display-1.lh-1.mb-3 Olevi
-                                    p.lead.fw-normal.text-muted.mb-5 Helppo suomalainen tunnistuspalvelu
+                                    h3.display-3.lh-1.mb-3 Helppoa tunnistamista
                             .col-7.mb-4.col-lg-12
-                                p Ota Olevi heti veloituksetta
-                                    a(href="https://test-idp.olevi.fi/mgmforms/") testikäyttöön,
-                                    | tai perustetaan teille oma instanssi. Ota yhteyttä valtuutettuun jälleenmyyjään oman instanssin perustamiseksi:
-                                ul
-                                    li
-                                        a(href='https://www.weare.fi/ota-yhteytta/') WeAre Solutions
-                    .col-lg-6
-                        img(src='/assets/img/olevi-auth-page.png', width='90%')
+                                p Ota Olevi heti veloituksetta testikäyttöön demopalvelussa, tai perustetaan teille oma instanssi. 
+                                p 
+                                    a.btn.btn-olevi.rounded-pill.px-4.py-3.my-2(href='https://test-idp.olevi.fi/mgmforms/') 
+                                        span.d-flex.align-items-center
+                                            i.bi-box-arrow-up-right 
+                                            |  &nbsp; Kokeile demo-palvelussa
+
+                    .col-lg-6.text-center
+                        img(src='https://misc.olevi.fi/assets/img/phone-mockup-1-c.png', width='60%')
+
+        section.properties
+            .container
+                div.row
+                    div.col.mx-auto.mb-5.text-center
+                        img(src='https://misc.olevi.fi/assets/img/Path-image-c.png', width="90%", style="max-width:760px;")
+                div.row.justify-content-center
+                    div.col-12
+                        h3 Digimaailma tarvitsee Olevin
+                    div.col-xs-12.col-md-6
+                        p Olevi on tunnistusratkaisu, joka soveltuu vaativiin käyttötapauksiin myös silloin, kun markkinoilla jo olevat pilvipalveluttuotteet eivät sovellu.
+                    div.col-xs-12.col-md-6
+                        p Olevi toteuttaa mm. OIDC- ja SAML-tunnistusprotokollia kytkeytyäkseen tunnistusvälineisiin. Tunnistamiseen tukeutuvat palvelut kykeytyvät Oleviin käyttäen samoja protokollia. Olevi voi kytkeytyä monenlaisiin käyttäjätietokantoihin.
+                div.row.justify-content-center.mt-3
+                    div.col-md-3
+                        div.col-12.mb-2 
+                            i.bi-x-circle
+                        div.col-12
+                            strong
+                                p Olevi käsittelee henkilötietoja ainoastaan tunnistustapahtuman yhteydessä
+                    div.col-xs-6.col-md-3
+                        div.col-12.mb-2 
+                            i.bi-box-arrow-in-right
+                            strong
+                                p Kirjaudu useisiin palveluihin yhdellä kertaa
+                    div.col-xs-6.col-md-3
+                        div.col-12.mb-2 
+                            i.bi-lock
+                            strong
+                                p Turvallinen vaihtoehto salasanoille
+                    div.col-xs-6.col-md-3
+                        div.col-12.mb-2 
+                            i.bi-check2-square
+                            strong
+                                p Helpompaa sovellusten ylläpitoa ja kehitystä
 
         // Quote/testimonial aside
-        aside.text-center.bg-gradient-primary-to-secondary
+        aside.text-center.align-content-center
             .container.px-5
                 .row.gx-5.justify-content-center
                     .col-xl-8
@@ -87,216 +125,194 @@ html(lang='en')
                         p.text-white.mb-4 Sovelluskehitystiimi
 
         section#features
-            .container.px-5
-                .row.gx-5.align-items-center
-                    .col-lg-12.mb-5.mb-lg-0
-                        .container-fluid.px-5
-                            .row.gx-5.align-items-center.my-4
-                                .col-md-6.mb-5
-                                    .row.mb-4.border.rounded.shadow-sm.align-items-center.text-center(style='height: 100px')
-                                            i.bi-fingerprint.icon-feature.text-gradient.d-block
-                                    .row.text-center
-                                            h3.font-alt Sormenjälkitunnistus
-                                .col-md-6.mb-5
-                                    .row.mb-4.border.rounded.shadow-sm.align-items-center.text-center(style='height: 100px')
-                                        .col-12.text-center
-                                            img(src='/assets/img/faceid.png', style='height: 60px;')
-                                    .row.text-center
-                                            h3.font-alt Kasvotunnistus
-                                .col-md-6.mb-5
-                                    .row.mb-4.border.rounded.shadow-sm.align-items-center.text-center(style='height: 100px;')
-                                        p.fs-4.fw-bold HST
-                                    .row.text-center
-                                        h3.mt-3.font-alt Henkilö- ja Sote-kortti
-                                .col-md-6.mb-5
-                                    .row.mb-4.border.rounded.shadow-sm.align-items-center.text-center(style='height: 100px;')
-                                        p.fs-4.fw-bold FTN
-                                    .row.text-center
-                                        h3.font-alt Pankkitunnistus
-                            .row.justify-content-center.gx-5.align-items-center.my-4
-                                .col-md-6
-                                    .row.mb-4.border.rounded.shadow-sm.align-items-center.text-center(style='height: 100px;')
-                                        img(src='/assets/img/fido2.png', style='height: 35px; width: auto; margin: auto;')
-                                    .row.text-center
-                                        h3.mt-3.font-alt Fido2-tunnistaminen
-
-        section.bg-light
-            .container.px-5
-                .row.justify-content-around
-                    .col-md-5.col-sm-12.my-2.border.rounded.p-4.bg-white
-                        h2.display-6.lh-1.mb-4 Tunnistaminen ilman salasanoja
-                        p.text-muted.my-text-light
-                            | Salasanat jäävät historiaan. Olevin avulla ei tarvitse muistaa pitkiä ja vaikeita salasanoja. 
-                        p.text-muted.my-text-light
-                            | Käyttäjä rekisteröi tunnisteen, joka liitetään selaimeen.
-                        p.text-muted.my-text-light
-                            | Tunnisteina voi käyttää esimerkiksi sormenjälki- ja kasvontunnistusta.
-
-                    .col-md-5.col-sm-12.my-2.border.rounded.p-4.bg-white
-                        h2.display-6.lh-1.mb-4 Tunnistamisen välityspalvelu
-                        p.text-muted.my-text-light
-                            | Olevi on OpenId Connect (OIDC) ja SAML2-tunnistuskäytänteitä toteuttava palvelu, joka tunnistaa käyttäjät mahdollistaen heidän pääsynsä järjestelmiin ja sovelluksiin. 
-                        p.text-muted.my-text-light
-                            | Tunnistuspalvelun avulla voidaan toteuttaa kertakirjautuminen (Single Sign On – SSO), jonka avulla käyttäjä pääsee yhden tunnistustapahtuman perusteella käyttämään kaikkia tunnistamisen piiriin kuuluvia sovelluksia ilman eri tunnistautumista. 
-                        p.text-muted.my-text-light
-                            | Olevi on toteuttanut tunnistamisen välityspalvelumallin, jossa tukeudutaan olemassaoleviin OIDC-tunnistuslähteisiin (esim. Azure AD, Google jne).
-
-        section.cta
-            .cta-content
-                .container.px-5
-                    h2.text-white.display-1.lh-1.mb-4
-                        | Kokeile käytännössä
-                    a.btn.btn-outline-light.py-3.px-4.rounded-pill(href='https://test-idp.olevi.fi/mgmforms/', target='_blank')
-                        i.bi-box-arrow-up-right &nbsp; Demo
-
-        section.bg-light.px-5
             .container
-            .row.align-items-center.justify-content-center
-                .col-sm-10
-                    h2.my-4 Hintaesimerkkejä
-                .col-sm-10.mb-4
-                    p Katso tarkempi selvitys hinnoittelun rakenteesta 
-                        a(href='https://doc.olevi.fi/pages/a-general/2-projectStructure/#purchasing-olevi') ohjesivulta (englanniksi).
-                    p Tässä mainitut hinnat ovat oletuksia todennäköisestä hintatasosta. Olevi määrittelee modulien lisenssien hinnan. Tukipalvelun ja alustapalvelun hinnoittelusta neuvottelet jälleenmyyjäsi kanssa. Kysy aina hintatarkennus
-                        a(href='https://www.weare.fi/ota-yhteytta/') jälleenmyyjältä
-                        |.
-            .row.justify-content-center
-                .col-sm-5.my-4
-                    .accordion#hintaDev
-                        .accordion-item
-                            h2.accordion-header
-                                button.accordion-button(
-                                    type='button', 
-                                    data-bs-toggle="collapse",
-                                    data-bs-target="#collapseDev",
-                                    aria-expanded="true",
-                                    aria-controls="collapseDev") Devaaja
-                            .accordion-collapse.collapse.show#collapseDev(data-bs-parent="#hintaDev")
-                                .accordion-body
-                                    h2.text-center.mb-3 0 €
-                                    p 
-                                        a(href="https://test-idp.olevi.fi/mgmforms/") Ota Olevi heti veloituksetta testikäyttöön
-                                    ul.my-3
-                                        li Pääsy yleiseen SaaS-instanssiin testaus- ja kehityskäytössä
-                                        li Rekisteröi palvelut itsepalveluna
-            .row.justify-content-center
-                .col-sm-5.my-4
-                    .accordion#hintaAloitus
-                        .accordion-item
-                            h2.accordion-header 
-                                button.accordion-button(
-                                    type='button', 
-                                    data-bs-toggle="collapse",
-                                    data-bs-target="#collapseAloitus",
-                                    aria-expanded="true",
-                                    aria-controls="collapseAloitus") Aloituspaketti
-                            .accordion-collapse.collapse.show#collapseAloitus
-                                .accordion-body
-                                    h2.text-center.mb-3 2500 € / kk
-                                    ul.my-3
-                                        li Kevyeen käyttöön tai yhteen käyttötapaukseen
-                                        li Itsenäiset IdP-instanssit testiin ja tuotantoon
-                        .accordion-item
-                            h2.accordion-header
-                                button.accordion-button.collapsed(
-                                    type='button', 
-                                    data-bs-toggle="collapse",
-                                    data-bs-target="#aloitusMod",
-                                    aria-expanded="true",
-                                    aria-controls="aloitusMod") Olevi Modulit - 1500 €
-                            .accordion-collapse.collapse#aloitusMod
-                                .accordion-body Olevin perusmodulit
-                                    ul.my-3
-                                        li ydin (Core Deployment)
-                                        li tunnistamisen välityspalvelu (OIDC RP)
-                        .accordion-item
-                            h2.accordion-header
-                                button.accordion-button.collapsed(
-                                    type='button', 
-                                    data-bs-toggle="collapse",
-                                    data-bs-target="#aloitusSLA",
-                                    aria-expanded="true",
-                                    aria-controls="aloitusSLA") Tukipalvelu - 500 €
-                            .accordion-collapse.collapse#aloitusSLA
-                                .accordion-body Kehityksen aikainen tuki
-                        .accordion-item
-                            h2.accordion-header
-                                button.accordion-button.collapsed(
-                                    type='button', 
-                                    data-bs-toggle="collapse",
-                                    data-bs-target="#aloitusPlatta",
-                                    aria-expanded="true",
-                                    aria-controls="aloitusPlatta") Alustapalvelu - 500 €
-                            .accordion-collapse.collapse#aloitusPlatta
-                                .accordion-body Alustapalvelu jaetulla pilvialustalla
-                .col-sm-5.my-4
-                    .accordion#hintaPerus
-                        .accordion-item
-                            h2.accordion-header
-                                button.accordion-button(
-                                    type='button', 
-                                    data-bs-toggle="collapse",
-                                    data-bs-target="#collapsePerus",
-                                    aria-expanded="true",
-                                    aria-controls="collapsePerus") Peruspaketti
-                            .accordion-collapse.collapse.show#collapsePerus
-                                .accordion-body
-                                    h2.text-center.mb-3 5300 € / kk
-                                    ul.my-3
-                                        li Tavanomaiseen käyttöön yritykselle
-                                        li Itsenäiset IdP-instanssit testiin ja tuotantoon
-                                        li Sormenjälki- ja kasvotunnistus
-                        .accordion-item
-                            h2.accordion-header
-                                button.accordion-button.collapsed(
-                                    type='button', 
-                                    data-bs-toggle="collapse",
-                                    data-bs-target="#perusMod",
-                                    aria-expanded="true",
-                                    aria-controls="perusMod") Olevi Modulit - 2000 €
-                            .accordion-collapse.collapse#perusMod
-                                .accordion-body
-                                    ul.my-3
-                                        li Olevin modulit
-                                            ul
-                                                li ydin (Core Deployment)
-                                                li tunnistamisen välityspalvelu (OIDC RP)
-                                                li sormenjälki ja kasvotunnistus (Fido/WebAuthn)
-                        .accordion-item
-                            h2.accordion-header
-                                button.accordion-button.collapsed(
-                                    type='button', 
-                                    data-bs-toggle="collapse",
-                                    data-bs-target="#perusSLA",
-                                    aria-expanded="true",
-                                    aria-controls="perusSLA") Tukipalvelu - 2500 €
-                            .accordion-collapse.collapse#perusSLA
-                                .accordion-body Tuotannonaikainen tavanomainen tuki
-                                    ul.my-3
-                                        li asiakkaan oma puhelinnumero tukipalveluun
-                                        li häiriönhallinta
-                                        li ratkaisun hallintaan liittyvät tavanomaiset ylläpitotyöt
-                                        li ratkaisun komponenttien tavanomaiset minor-päivitykset 
-                                        li ratkaisun komponenttien tietoturvapäivitykset
-                                        li ratkaisun valvonta
-                                        li SLA-raportointi
-                        .accordion-item
-                            h2.accordion-header
-                                button.accordion-button.collapsed(
-                                    type='button', 
-                                    data-bs-toggle="collapse",
-                                    data-bs-target="#perusPlatta",
-                                    aria-expanded="true",
-                                    aria-controls="perusPlatta") Alustapalvelu - 800 €
-                            .accordion-collapse.collapse#perusPlatta
-                                .accordion-body 
-                                    p Yrityksen erillinen pilvialusta
-                                    p Mahdollisuus myös muiden palvelujen toteuttamiseen samalla pilvialustalla
+                div.row.align-items-center
+                    div.col-md-6.col-xs-12
+                        div.col-12
+                            h3 Tallenna laitteesi tunniste
+                        div.col-12
+                            p Salasanat jäävät historiaan. Käyttäjän valitessa Olevi muistaa tunnistamisen. Vaikeita ja pitkiä salasanoja ei tarvitse muistaa. Salasanan vaihtaminen on menneisyyttä.
+                            p Käyttäjä tallentaa laitetunnisteen, joka liitetään selaimeen. Tunnisteina voi käyttää sormenjälkeä, kasvotunnistusta tai laitteen pääsykoodia. Kirjautuminen on turvallista, kun se onnistuu vain käyttäjän selaimen ja laitetunnisteen yhdistelmällä.
+                            p Käyttäjän tunnistetta ei tallenneta Olevin tietokantaan tai muuten keskitetysti, vaan tunnistamisen tekijät ovat suojattuna käyttäjän hallussa. Varas ei voi saada tunnisteita haltuunsa, sillä ne on suojattu laitteen turvapiiriin. 
+                    div.col-md-5.col-xs-12.ms-3.mt-3
+                        div.col-12
+                            p
+                                img(src='https://misc.olevi.fi/assets/icon/Sormenjalkitunnistus.svg') 
+                                |  Sormenjälkitunnistus
+                            p
+                                img(src='https://misc.olevi.fi/assets/icon/Kasvotunnistus.svg') 
+                                |  Kasvotunnistus
+                            p
+                                img(src='https://misc.olevi.fi/assets/icon/Henkilo-ja-Sote-kortti.svg') 
+                                |  Henkilö- ja Sote-kortti
+                            p
+                                img(src='https://misc.olevi.fi/assets/icon/Pankkitunnistus.svg') 
+                                |  Pankkitunnistus
+                            p
+                                img(src='https://misc.olevi.fi/assets/icon/Fido2-tunnistaminen.svg') 
+                                |  Fido2-tunnistaminen
+
+        section.pricing
+            .container
+                .row.align-items-center.justify-content-center
+                    .col-12
+                        h2.my-4 Hintaesimerkkejä
+                    .col-12.mb-4
+                        p Katso tarkempi selvitys hinnoittelun rakenteesta 
+                            a(href='https://doc.olevi.fi/pages/a-general/2-projectStructure/#purchasing-olevi') ohjesivulta (englanniksi)
+                            |.
+                        p Tässä mainitut hinnat ovat oletuksia todennäköisestä hintatasosta. Olevi määrittelee modulien lisenssien hinnan. Tukipalvelun ja alustapalvelun hinnoittelusta neuvottelet jälleenmyyjäsi kanssa. Kysy aina hintatarkennus
+                            a(href='https://www.weare.fi/ota-yhteytta/') jälleenmyyjältä
+                            |.
+                .row.justify-content-center
+                    .col-sm-5.my-4
+                        .accordion#hintaDev
+                            .accordion-item
+                                h2.accordion-header
+                                    button.accordion-button(
+                                        type='button', 
+                                        data-bs-toggle="collapse",
+                                        data-bs-target="#collapseDev",
+                                        aria-expanded="true",
+                                        aria-controls="collapseDev") Devaaja
+                                .accordion-collapse.collapse.show#collapseDev(data-bs-parent="#hintaDev")
+                                    .accordion-body
+                                        h2.text-center.mb-3 0 €
+                                        p.text-center
+                                            a.btn.btn-olevi.rounded-pill.px-4.py-3.my-2(href='https://test-idp.olevi.fi/mgmforms/') 
+                                                span.d-flex.align-items-center
+                                                    i.bi-box-arrow-up-right 
+                                                    |  &nbsp; Kokeile demo-palvelussa
+                                        ul.my-3
+                                            li Pääsy yleiseen SaaS-instanssiin testaus- ja kehityskäytössä
+                                            li Rekisteröi palvelut itsepalveluna
+                .row.justify-content-center
+                    .col-sm-5.my-4
+                        .accordion#hintaAloitus
+                            .accordion-item
+                                h2.accordion-header 
+                                    button.accordion-button(
+                                        type='button', 
+                                        data-bs-toggle="collapse",
+                                        data-bs-target="#collapseAloitus",
+                                        aria-expanded="true",
+                                        aria-controls="collapseAloitus") Aloituspaketti
+                                .accordion-collapse.collapse.show#collapseAloitus
+                                    .accordion-body
+                                        h2.text-center.mb-3 2500 € / kk
+                                        ul.my-3
+                                            li Kevyeen käyttöön tai yhteen käyttötapaukseen
+                                            li Itsenäiset IdP-instanssit testiin ja tuotantoon
+                            .accordion-item
+                                h2.accordion-header
+                                    button.accordion-button.collapsed(
+                                        type='button', 
+                                        data-bs-toggle="collapse",
+                                        data-bs-target="#aloitusMod",
+                                        aria-expanded="true",
+                                        aria-controls="aloitusMod") Olevi Modulit - 1500 €
+                                .accordion-collapse.collapse#aloitusMod
+                                    .accordion-body Olevin perusmodulit
+                                        ul.my-3
+                                            li ydin (Core Deployment)
+                                            li tunnistamisen välityspalvelu (OIDC RP)
+                            .accordion-item
+                                h2.accordion-header
+                                    button.accordion-button.collapsed(
+                                        type='button', 
+                                        data-bs-toggle="collapse",
+                                        data-bs-target="#aloitusSLA",
+                                        aria-expanded="true",
+                                        aria-controls="aloitusSLA") Tukipalvelu - 500 €
+                                .accordion-collapse.collapse#aloitusSLA
+                                    .accordion-body Kehityksen aikainen tuki
+                            .accordion-item
+                                h2.accordion-header
+                                    button.accordion-button.collapsed(
+                                        type='button', 
+                                        data-bs-toggle="collapse",
+                                        data-bs-target="#aloitusPlatta",
+                                        aria-expanded="true",
+                                        aria-controls="aloitusPlatta") Alustapalvelu - 500 €
+                                .accordion-collapse.collapse#aloitusPlatta
+                                    .accordion-body Alustapalvelu jaetulla pilvialustalla
+                    .col-sm-5.my-4
+                        .accordion#hintaPerus
+                            .accordion-item
+                                h2.accordion-header
+                                    button.accordion-button(
+                                        type='button', 
+                                        data-bs-toggle="collapse",
+                                        data-bs-target="#collapsePerus",
+                                        aria-expanded="true",
+                                        aria-controls="collapsePerus") Peruspaketti
+                                .accordion-collapse.collapse.show#collapsePerus
+                                    .accordion-body
+                                        h2.text-center.mb-3 5300 € / kk
+                                        ul.my-3
+                                            li Tavanomaiseen käyttöön yritykselle
+                                            li Itsenäiset IdP-instanssit testiin ja tuotantoon
+                                            li Sormenjälki- ja kasvotunnistus
+                            .accordion-item
+                                h2.accordion-header
+                                    button.accordion-button.collapsed(
+                                        type='button', 
+                                        data-bs-toggle="collapse",
+                                        data-bs-target="#perusMod",
+                                        aria-expanded="true",
+                                        aria-controls="perusMod") Olevi Modulit - 2000 €
+                                .accordion-collapse.collapse#perusMod
+                                    .accordion-body
+                                        ul.my-3
+                                            li Olevin modulit
+                                                ul
+                                                    li ydin (Core Deployment)
+                                                    li tunnistamisen välityspalvelu (OIDC RP)
+                                                    li sormenjälki ja kasvotunnistus (Fido/WebAuthn)
+                            .accordion-item
+                                h2.accordion-header
+                                    button.accordion-button.collapsed(
+                                        type='button', 
+                                        data-bs-toggle="collapse",
+                                        data-bs-target="#perusSLA",
+                                        aria-expanded="true",
+                                        aria-controls="perusSLA") Tukipalvelu - 2500 €
+                                .accordion-collapse.collapse#perusSLA
+                                    .accordion-body Tuotannonaikainen tavanomainen tuki
+                                        ul.my-3
+                                            li asiakkaan oma puhelinnumero tukipalveluun
+                                            li häiriönhallinta
+                                            li ratkaisun hallintaan liittyvät tavanomaiset ylläpitotyöt
+                                            li ratkaisun komponenttien tavanomaiset minor-päivitykset 
+                                            li ratkaisun komponenttien tietoturvapäivitykset
+                                            li ratkaisun valvonta
+                                            li SLA-raportointi
+                            .accordion-item
+                                h2.accordion-header
+                                    button.accordion-button.collapsed(
+                                        type='button', 
+                                        data-bs-toggle="collapse",
+                                        data-bs-target="#perusPlatta",
+                                        aria-expanded="true",
+                                        aria-controls="perusPlatta") Alustapalvelu - 800 €
+                                .accordion-collapse.collapse#perusPlatta
+                                    .accordion-body 
+                                        p Yrityksen erillinen pilvialusta
+                                        p Mahdollisuus myös muiden palvelujen toteuttamiseen samalla pilvialustalla
                                     
-        // App badge section
-        section#download.bg-gradient-primary-to-secondary
-            .container.px-5
-                h2.text-center.text-white.mb-4 Helpompaa tunnistamista jo tänään
+
+        // News
+        section.news
+            .container
+                .h3 UUTISET
+                .row
+                .col-4
+                    .card
+                        .card-body
+                            p 8.3.2024
+                            h5 
+                                a(href='/news/20240308-olevi-vorna.html') Olevi + Vorna ID for Business Customer IAM
+                            p An innovative partnership to govern access in business ecosystems with customer identity and access management.
 
         // Footer
         footer.bg-black.text-center.py-5

@@ -1,0 +1,14 @@
+section.pricing {
+    background-image: url('https://misc.olevi.fi/assets/img/Pricing-background-c.png');
+    background-repeat: no-repeat;
+    padding-top: 150px;
+    color: $valkoinenGraniitti;
+
+    a {
+        color: whitesmoke;
+    }
+    i {
+        color: $mustaGraniitti;
+        font-size: 1em;
+    }
+}

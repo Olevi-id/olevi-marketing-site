@@ -5,6 +5,8 @@
 // Import variables
 @import "./variables.scss";
 
+@import url(https://fonts.bunny.net/css?family=familjen-grotesk:400,400i,500,500i,600,600i,700,700i);
+
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
 
@@ -16,7 +18,10 @@
 @import "./components/device-mockup.scss";
 
 // Sections
-@import "./sections/cta.scss";
+@import "./sections/feedback.scss";
 @import "./sections/features.scss";
 @import "./sections/footer.scss";
 @import "./sections/masthead.scss";
+@import "./sections/properties.scss";
+@import "./sections/pricing.scss";
+@import "./sections/testimony.scss";

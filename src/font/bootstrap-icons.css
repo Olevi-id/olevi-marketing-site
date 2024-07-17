@@ -7,8 +7,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("/font/bootstrap-icons.woff2?1fa40e8900654d2863d011707b9fb6f2") format("woff2"),
-url("/font/bootstrap-icons.woff?1fa40e8900654d2863d011707b9fb6f2") format("woff");
+  src: url("https://misc.olevi.fi/assets/font/bootstrap-icons.woff2?1fa40e8900654d2863d011707b9fb6f2") format("woff2"),
+    url("https://misc.olevi.fi/assets/font/bootstrap-icons.woff?1fa40e8900654d2863d011707b9fb6f2") format("woff");
 }
 
 .bi::before,

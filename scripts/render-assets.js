@@ -8,7 +8,6 @@ module.exports = function renderAssets() {
     let destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
     
     sh.cp('-R', sourcePath, destPath)
-    sh.cp(sourcePath + '/favicon.ico', './dist/');
 
     sourcePath = upath.resolve(upath.dirname(__filename), '../src/font');
     destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
@@ -17,4 +16,11 @@ module.exports = function renderAssets() {
     sourcePath = upath.resolve(upath.dirname(__filename), '../src/Olevi-License-Terms.md');
     destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
     sh.cp(sourcePath, destPath)
-};
+    
+    sourcePath = upath.resolve(upath.dirname(__filename), '../src/browserconfig.xml');
+    destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
+    sh.cp(sourcePath, destPath);
+    
+    sourcePath = upath.resolve(upath.dirname(__filename), '../src/site.webmanifest');
+    destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
+    sh.cp(sourcePath, destPath)};    
