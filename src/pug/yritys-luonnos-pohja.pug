@@ -120,7 +120,7 @@ html(lang='en')
                 .col-sm-6.col-md-6
                     p 
                         strong Haluatko mukaan?
-                        a(href="#feedbackModal",data-toggle='modal', data-target='#feedbackModal') Ota yhteyttä
+                        a(href="#feedbackModal",data-bs-toggle='modal', data-bs-target='#feedbackModal') Ota yhteyttä
                         |, jos haluat tulla mukaan tekemään Olevia. Kerro meille, millaisella roolilla haluaisit osallistua tekemiseen.
             .row
                 .col-sm-12.col-md-8.mt-3
@@ -171,12 +171,12 @@ html(lang='en')
                     //-span.mx-1 &middot;
                     //-a(href='#!') FAQ
         
-        include ./includes/feedback-modal.pug
+        include includes/feedback-modal.pug
 
-        script(src='/js/jquery.min.js')
+        script(src='https://misc.olevi.fi/assets/js/jquery.min.js')
         // Bootstrap core JS
-        script(src='/js/popper.min.js')
-        script(src='/js/bootstrap.bundle.min.js')
+        script(src='https://misc.olevi.fi/assets/js/popper.min.js')
+        script(src='https://misc.olevi.fi/assets/js/bootstrap.bundle.min.js')
 
         // Core theme JS
-        script(src='js/scripts.js')
+        script(src='./js/scripts.js')
