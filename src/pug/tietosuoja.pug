@@ -29,7 +29,7 @@ html(lang='en')
                         p Tämä asiakirja muodostaa tietosuojaselosteen version, joka on päivätty
                     .col-12
                         p
-                            b 2024-11-18
+                            b 2025-03-11
                     .col-12
                         p Tämä asiakirja kumoaa kaikki aiemmat versiot tietosuojaselosteesta.
                         p Tämä asiakirja on alunperin kirjoitettu suomen kielellä. Mahdolliset käännökset tai konekäännökset asiakirjasta eivät ole lainvoimaisia, vaan ainoastaan ohjeellisia ja avuksi henkilötietojen käsittelyn periaatteiden selvittämisessä. Vain tämä suomenkielinen versio tietosuojaselosteesta on pätevä.
@@ -42,6 +42,29 @@ html(lang='en')
                             a(href='https://creativecommons.org/licenses/by/4.0/deed.fi') Creative Commons CC BY 4.0
                             | -ehtoja.
 
+                .col-10.mt-3
+                    h2 Sisällysluettelo
+                    ul
+                        li
+                            a(href="#kasittelynTarkoitus") Käsittelyn tarkoitus
+                        li
+                            a(href="#kasRyhmat") Kuvaus rekisteröityjen ryhmistä ja henkilötietoryhmistä
+                        li
+                            a(href="#luovutusRyhat") Ryhmät, joille henkilötietoja on luovutettu tai luovutetaan
+                        li
+                            a(href="#luovutusUlkomaat") Tiedot henkilötietojen siirtämisestä kolmanteen maahan tai kansainväliselle järjestölle
+                        li
+                            a(href="#sailytysajat") Tietojen säilytysajat
+                        li
+                            a(href="#turvatoimet") Kuvaus teknisistä ja organisatorisista turvatoimista
+                        li
+                            a(href="#erityiset") Erityiset käyttötapaukset
+                        li
+                            a(href="#maantiede") Henkilötietojen käsittelyn maantieteellinen sijainti ja tietojen käsittelyyn osallistuvat kolmannen osapuolen henkilötietojen käsittelijät
+                        li
+                            a(href="#evasteet") Evästeiden käyttö
+                        li
+                            a(href="#tietopyynnot") Viranomaisten pyyntöön perustuvat tietojen luovutukset
                 .col-10.mt-3
                     h2 Rekisterinpitäjä ja tietosuojavastaava
             .row
@@ -69,14 +92,16 @@ html(lang='en')
                         | yhteydenottolomakkeella. Yhteydenottolomakkeen käytössä ei tarvitse antaa henkilötietoja, mutta jos haluaa vastauksen kysymykseensä, täytyy kysyjän kertoa jonkinlainen yhteydenottotapa, johon voimme lähettää vastauksen kysymykseen.
             .row
                 .col-10.mt-3
-                    h2 Käsittelyn tarkoitus
+                    h2 
+                        a(id="kasittelynTarkoitus") Käsittelyn tarkoitus
                 .col-10.mt-3
-                    p Olevi käsittelee henkilötietoja rekisteröidyn toimeksiannosta. Käyttäjän pyytäessä Olevin tekemää tunnistamista, käyttäjän henkilötietoja käsitellään tunnistustapahtuman toteuttamiseksi.
+                    p Olevi käsittelee henkilötietoja pääsääntöisesti rekisteröidyn toimeksiannosta. Käyttäjän pyytäessä Olevin tekemää tunnistamista, käyttäjän henkilötietoja käsitellään tunnistustapahtuman toteuttamiseksi.
                     p Silloin, kun käyttäjä tai käyttäjän organisaatio tai käyttäjän käyttämän palvelun tuottaja on tehnyt sopimuksen Olevin tuottamien palvelujen käytöstä, käsittely perustuu kyseiseen sopimukseen.
                     p Kun käyttäjän käyttämä asiointipalvelu on tehnyt sopimuksen Olevin kanssa käyttäjien tunnistamisesta, Olevin osuus henkilötietojen käsittelyssä on tunnistaa käyttäjä ja palauttaa tunnistusvastaus käyttäjän käyttämälle asiointipalvelulle. Käyttäjän käyttämä asiointipalvelu toimii rekisterinpitäjänä vastaanottamiensa tietojen osalta ja vastaa henkilötietojen käsittelystä oman toimintansa osalta. Olevi toimii rekisterinpitäjänä vain tunnistustapahtumaan liittyen ja tunnistamiseen tarvittavien tietojen käsittelyyn liittyen. Kun henkilötiedot on siirretty asiointipalvelulle, asiointipalvelu vastaa tietojen käsittelystä siitä eteenpäin.
                     p Edellisten lisäksi Olevin järjestelmistä tallennettavia lokitietoja käytetään tarpeellisessa laajuudessa vianselvitykseen. Lokitietoja voidaan käsitellä myös rikosten tai muiden väärinkäytösten selvittämiseen tai palvelujen teknisen toiminnan tarkasteluun siltä osin, kun on tarpeen järjestelmän toimintojen tehokkuuden ja toiminnan osalta selvittää tai siltä osin, kuin viranomaiset sitä pyytävät laillisin perustein (katso alta tarkemmin viranomaisten pyyntöihin perustuvasta tietojenluovutuksesta).
                 .col-10.mt-3
-                    h2 Kuvaus rekisteröityjen ryhmistä ja henkilötietoryhmistä
+                    h2
+                        a(id="kasRyhmat") Kuvaus rekisteröityjen ryhmistä ja henkilötietoryhmistä
                     p Olevi käsittelee 
                         b Olevi Tunnistuspalveluun
                         | ja
@@ -117,7 +142,8 @@ html(lang='en')
                         li Käyttäjän laitteen selaimen lähettämät otsaketiedot sisältäen mm. käyttäjän laitteen lähettämän User-Agent -merkkijonon, jonka perusteella ja joissain tilanteissa käyttäjän laitetyyppi voidaan tunnistaa
                         li Tapahtuman kellonaika
                 .col-10.mt-3
-                    h2 Ryhmät, joille henkilötietoja on luovutettu tai luovutetaan
+                    h2 
+                        a(id="luovutusRyhat") Ryhmät, joille henkilötietoja on luovutettu tai luovutetaan
                     p Olevi Tunnistuspalvelusta luovutetaan käyttäjän henkilötietoja asiointipalveluille, joissa käyttäjä on pyytänyt tunnistautumista Olevi Tunnistuspalvelua ja/tai Olevi Tunnistetta käyttäen.
                     p Tunnistustapahtuma käynnistyy aina käyttäjän pyynnöstä ja käyttäjä voi keskeyttää tunnistustapahtuman ennen henkilötietojen luovuttamista.
                     p Käyttäjä määrää itse tunnistustapahtuman käynnistämällä ja/tai käynnistettyä tunnistustapahtumaa jatkamalla, mille asiointipalveluille ja missä yhteydessä hänen henkilötietojaan luovutetaan.
@@ -127,16 +153,19 @@ html(lang='en')
                     p Silloin, kun käyttäjä on pyytänyt liittyä Olevi Ryhmään tai hyväksytty ryhmän jäseneksi, ryhmän pääkäyttäjä näkee ryhmään jäsenyyttä pyytäneiden ja ryhmään hyväksyttyjen henkilöiden luettelon. Vastaavasti ryhmän jäsenet näkevät, kuka on ryhmän pääkäyttäjä. Tällaisessa tilanteessa pääkäyttäjästä ja ryhmän jäsenistä näytetään henkilön nimi ja henkilön käyttäjänimi, joka voi perustua sähköpostiosoitteeseen sekä näiden lisäksi käyttäjän syöttämät muut tiedot (esimerkiksi perustelu ryhmään liittymispyynnölle).
                     p Olevi ei luovuta henkilötietoja muutoin, kuin asiointipalveluille, jotka ovat tehneet sopimuksen Olevi Tunnistuspalvelun tai Olevi Tunnisteen käytöstä, ellei laki ja viranomaisten lakiin perustuvat vaatimukset muuta edellytä. Olevi raportoi tämän asiakirjan lopussa kuukausittain lukumäärätiedon sellaisista henkilötietojen luovutuksista, jotka perustuvat viranomaisen pyyntöön.
                 .col-10.mt-3
-                    h2 Tiedot henkilötietojen siirtämisestä kolmanteen maahan tai kansainväliselle järjestölle
+                    h2 
+                        a(id="luovutusUlkomaat") Tiedot henkilötietojen siirtämisestä kolmanteen maahan tai kansainväliselle järjestölle
                     p Olevi ei luovuta henkilötietoja kolmansiin maihin. Olevi Oy tekee sopimuksia vain sellaisten asiointipalvelujen kanssa, jotka sijaitsevat Euroopan Talousalueella (ETA).
                 .col-10.mt-3
-                    h2 Tietojen säilytysajat
+                    h2 
+                        a(id="sailytysajat") Tietojen säilytysajat
                     p Kun Olevia käytetään vain tunnistamiseen, Olevi säilyttää henkilötietoja vain sen ajan, kun tunnistustapahtuma on kesken tai siihen liittyvä istunto on voimassa. Olevi Tunnistuspalvelun tunnistusistuntojen voimassaolo on enintään kahdeksan tuntia.
                     p Kun käyttäjä rekisteröi Olevi Tunnisteen, henkilötiedot tallennetaan Olevi Tunnisteeseen liittyen. Tietoja tallennetaan niin pitkään, kun käyttäjän Olevi Tunniste pysyy aktiivisena. Jos Olevi Tunnisteeseen liittyen ei ole tapahtumia kolmeen kuukauteen, se katsotaan vanhentuneeksi. Kolmen kuukauden jälkeen käyttäjällä on vielä 30 päivää aikaa kirjautua käyttäen Olevi Tunnistetta, jolloin se aktivoituu uudelleen. Henkilötiedot poistetaan viimeistään neljän kuukauden kuluttua viimeisimmästä tapahtumasta Olevi Tunnisteeseen liittyen.
                     p Kun asiointipalvelu on tehnyt sopimuksen Olevi-palvelujen käytöstä ja sopimukseen liittyen tapahtuu laskutusta, henkilötietoja tallennetaan sopimuksen yhteydessä niin pitkään, kuin laki kirjanpidon aineiston säilyttämisestä edellyttää.
                     p Teknisiä lokitietoja säilytetään enintään vuosi, ellei viranomaisten tekemistä pyynnöistä, vaatimuksista tai selvityksistä tai mahdollisesta rikostutkinnasta muuta aiheudu.
                 .col-10.mt-3
-                    h2 Kuvaus teknisistä ja organisatorisista turvatoimista
+                    h2 
+                        a(id="turvatoimet") Kuvaus teknisistä ja organisatorisista turvatoimista
                     h3 Tekniset turvatoimet
                     p Olevi-palvelujen ja käyttäjän välinen tietoliikenne on suojattu salauksella siten, että
                     ul
@@ -158,7 +187,50 @@ html(lang='en')
                     p TÄLLAISESSA TILANTEESSA OLEVIN TUOTTAMIEN PALVELUJEN TOIMINTA LAKKAA VÄLITTÖMÄSTI ILMAN ENNAKKOVAROITUSTA JA KÄYTTÄJIEN PÄÄSY HENKILÖTIETOIHIN JA OLEVIN TUOTTAMIIN PALVELUIHIN ESTYY.
                     P TÄLLAISESSA TILANTEESSA OLEVI LOPETTAA PALVELUJEN TUOTTAMISEN JA HENKILÖTIETOJEN KÄSITTELYN ASIASTA TEHTYJEN SOPIMUKSIEN FORCE MAJEURE -PYKÄLIIN PERUSTUEN.
                 .col-10.mt-3
-                    h2 Henkilötietojen käsittelyn maantieteellinen sijainti ja tietojen käsittelyyn osallistuvat kolmannen osapuolen henkilötietojen käsittelijät
+                    h2
+                        a(id="erityiset") Erityiset käyttötapaukset
+                    p Tässä kappaleessa kuvataan erityiset käyttötapaukset, jotka tukevat Olevi-yhtiön liiketoimintaa. Erityisissä käyttötapauksissa käsittely saattaa poiketa yllä kuvatusta. Tällaiset poikkeamat kuvataan kunkin erityisen käyttötapauksen kohdalla erikseen siltä osin, kun poikkeamaa on. Myös erityisten tapausten osalta käsittelyn maantieteellinen sijainti ja käsittelijä on lueteltu allaolevassa taulukossa.
+
+                    h3 Sähköposti, kalenteri, verkkotapaamiset, ajanvaraus ja muu tyypillinen viestintä
+                    p Voit viestiä meidän kanssa mm. sähköpostia käyttäen. Silloin, kun sovimme tapaamisia, kutsut välietetään sähköpostilla ja tapahtumat merkitään kalenteriin. 
+                    p Viestinnässä käsittelyperuste henkilötietojen käsittelyyn on sopimus tai Olevin oikeutettu etu. Jos viestinnän kohteena oleva henkilö on jo Olevin kanssa tehdyn sopimuksen piirissä, käsittely perustuu tällaiseen sopimukseen. Muussa tapauksessa käsittelyperuste on Olevin oikeutettu etu viestiä asiakkaidensa ja yhteistyökumppaniensa kanssa liiketoimintojen suorittamiseksi.
+                    p Päivittäinen sähköpostiviestintä tapahtuu Proton-järjestelmää käyttäen. Verkkokokoukset järjestetään Microsoftin Teams-palvelussa. Silloin, kun varaat meidän kanssa tapaamisia tai osallistut verkkokouksiin, näihin liittyvä viestintä ja tietojen käsittely tapahtuu Microsoftin alustalla.
+                    p Jotkin verkkoalustalla järjestetyt tapaamiset voidaan tallentaa esimerkiksi informatiivisen verkkokokouksen (webinaari) julkaisemiseksi myöhemmin markkinointitarkoituksessa. Osallistujat saavat aina erikseen tiedon, kun tapaamista tallennetaan.
+                    p Allaolevassa taulukossa on linkit Proton- ja Microsoft-palveluiden tietosuojaselosteisiin.
+
+                    h3 Asiakkuuden hallinta
+                    p Käsittelemme asiakkaidemme tietoja asiakkuudenhallintajärjestelmässä. Järjestelmä on Karidea Oy:n toteuttama (katso allaoleva taulukko).
+                    p Asiakasrekisteriin tallennetaan sekä nykyisten, että mahdollisten asiakkaidemme tietoja. Nykyisten asiakkaiden osalta henkilötietojen käsittelyperuste on Olevin ja asiakkaan välinen sopimus.
+                    
+                    p Mahdolliset asiakkaat ovat sellaisia, jotka voisivat tulla Olevi-yhtiön asiakkaaksi, mutta eivät vielä ole sellaisia. Asiakasrekisterin henkilötietojen käsittelyperusteena on Olevin oikeutettu etu Olevin liiketoiminnan mahdollisuuksien toteuttamiseksi.
+                    p Asiakastiedot ovat pääasiassa oikeushenkilöiden tietoja. Henkilötietoja tässä yhteydessä käsitellään silloin, kun kirjaamme ylös kontaktihenkilöitä ja heidän yhteystietojaan asiakkuudenhallintajärjestelmään. Tietoryhmät ovat samoja, joita käsittelisimme joka tapauksessa, jos nämä henkilöt itse kirjautuisivat Olevi Tunnisteellaan palveluumme ja luovuttaisivat tiedot itse. Tyypillisiä käsiteltäviä yhteystietoja henkilöille ovat:
+                    ul
+                        li Henkilön nimitiedot
+                        li Sähköpostiosoitteet
+                        li Puhelinnumerot
+                        li Tieto organisaatioista, joihon henkilö on assosioitunut
+
+                    h4 Asiakkuudenhallinnan tietojen käsittelyajat
+                    p Mahdollisten asiakkaiden ja kontaktihenkilöiden tietojen säilytysaika on pidempi, kuin Olevi-tunnisteeseen liittyvien henkilötietojen. Mahdollisen asiakkaan tietoja säilytämme kolme vuotta viimeisimmästä merkinnästä asiakkuuteen liittyen. Merkintä saattaa olla tieto siitä, että asiakkaan kanssa on viestitty tai häntä on yritetty tavoitella. Kun asiakkaan kanssa ei ole ollut minkäänlaista yhteydenpitoa yli kolmeen vuoteen, tiedot poistetaan.
+                    p Kontaktihenkilö on sellainen organisaatioon kytkeytyvä henkilötieto, joka on ollut Olevin asiakas tai jonka olemme tunnistaneet mahdolliseksi asiakkaaksi. Olevi Tunnisteen luonut henkilö voi muuttua Tunnisteen inaktivoitumisen jälkeen asiakkuudenhallintaan liittyväksi kontaktihenkilöksi, jos tunnistamme, että kyseessä on ollut asiakkuuteen liittyvä tunniste.
+
+                    h4 Asiakkuudenhallinnan tietolähteet
+                    p Tietolähteet mahdollisten tulevien asiakkaiden löytämiseksi ovat moninaiset. Käytämme mm. seuraavia tietolähteitä:
+                    ul
+                        li Organisaatioiden julkiset www-sivut
+                        li Sanoma- ja aikakauslehdet
+                        li 
+                            a(href="https://www.linkedin.com/") LinkedIn
+                        li Yhteistyöverkostomme luovuttamat yhteystiedot
+                        li 
+                            a(href="https://www.fonecta.fi") Fonecta
+                        li
+                            a(href="https://www.ytj.fi") Yritys- ja yhteisötietojärjestelmä (julkiset tiedot)
+                    p Lueteltujen lähteiden lisäksi asiakkuustietoja voidaan löytää myös muista julkisista lähteistä, kuten mainoksista tai organisaatioiden lähettämistä tiedotteista. Asiakkuustietoja yhdistellään eri lähteistä sen mukaisesti, kun tunnistamme tietojen liittyvän toisiinsa.
+                    
+                .col-10.mt-3
+                    h2 
+                        a(id="maantiede") Henkilötietojen käsittelyn maantieteellinen sijainti ja tietojen käsittelyyn osallistuvat kolmannen osapuolen henkilötietojen käsittelijät
                     p Olevi käsittelee henkilötietoja ensisijaisesti Suomessa, mutta joissain tapauksissa myös Suomen ulkopuolella. Kaikissa tapauksissa henkilötietoja käsitellään vain Euroopan Talousalueella. Tässä luetellaan tarkemmin kolmannet osapuolet, jotka käsittelevät henkilötietoja Olevin lukuun tuottamalla alustapalveluja, joita Olevi hyödyntää palvelujensa tuottamisessa.
             .row
                 .col-10
@@ -194,18 +266,40 @@ html(lang='en')
                             tr
                                 td
                                     a(href='https://www.karidea.fi') Karidea Oy
-                                td Alustapalvelujen ylläpito
+                                td Alustapalvelujen ylläpito, asiakastietojen hallinta
                                 td Suomi
+                            tr
+                                td
+                                    a(href="https://proton.me/legal/privacy") Proton
+                                td  Sähköposti ja kalenteri (olevi.fi)
+                                td Sveitsi tai Saksa
+                            tr
+                                td
+                                    a(href="https://www.microsoft.com/en-us/privacy/privacystatement") Microsoft
+                                td Sähköposti, kalenteri ja ajanvarauspalvelu (olevi.eu)
+                                td Eurooppa
+                            tr
+                                td 
+                                    a(href="https://hahaa.fi/tietosuojaseloste/") Hahaa
+                                td Yhteydenpito asiakkaisiin ja asiakastapaamisien sopiminen
+                                td Eurooppa
+                            tr
+                                td
+                                    a(href="https://corporate.dna.fi/tietosuoja") DNA
+                                td Puhelujen ja tekstiviestien välittäminen yleisessä puhelinverkossa
+                                td Katso tarkemmin DNA:n oma seloste. Käsittelyn sijainti on riippuvainen soittajan valitsemasta teleoperaattorista ja sijaintipaikasta. 
             .row
                 .col-10.mt-3
-                    h2 Evästeiden käyttö
+                    h2 
+                        a(id="evasteet") Evästeiden käyttö
                     p Olevi tallentaa evästeitä käyttäjän haltuun ja käyttäjän laitteeseen ainostaan silloin, kun se on välttämätöntä käyttäjän pyytämien palvelujen tuottamiseksi ja/tai käyttäjän pyytämän toimenpiteen suorittamiseksi. Olevi ei erikseen informoi evästeiden käytöstä muualla, kuin tässä tietosuojaselosteessa.
                     p Evästeiden tallentamiseen käyttäjän haltuun ei pyydetä käyttäjän suostumusta, koska niiden tallentaminen on välttämätöntä käyttäjän pyytämien palvelujen tuottamiseksi. Evästeiden tallentaminen käyttäjän haltuun perustuu käyttäjän tekemään toimeksiantoon tai palvelujen käytöstä tehtyyn sopimukseen.
                     p Olevin käyttäjän haltuun tallentamien evästeiden tarkoitus on kytkeä käyttäjä meneillään olevaan tunnistustapahtumaan, tunnistustapahtumaan liittyvään istuntoon ja sen varmistamiseksi, että kukaan muu tai mikään muu osapuoli, kuin käyttäjä itse ei pääse osaksi tunnistustapahtumaa tai pääse käsittelemään siihen liittyviä tietoja. Tällaisten evästeiden käyttö on välttämätöntä käyttäjän pyytämien palvelujen tuottamiseksi.
                     p Lisäksi käyttäjän haltuun tallennetaan käyttäjän tunnistamisessa välttämätöntä tietoa silloin, kun käyttäjä käyttää teknisessä laitteessaan muodostettavaa julkisen ja salaisen avaimen paria tunnistamisessa. Tiedon tallentaminen käyttäjän haltuun on välttämätöntä, jotta käyttäjä voi käyttää teknistä avaintaan tullessaan uudelleen tunnistautumaan Olevi Tunnistuspalveluun.
             .row    
                 .col-10.mt-3
-                    h2 Viranomaisten pyyntöön perustuvat tietojen luovutukset
+                    h2 
+                        a(id="tietopyynnot") Viranomaisten pyyntöön perustuvat tietojen luovutukset
                     p Tässä luetellaan kuukausittain lukumäärätietoa sellaisista henkilötietojen luovutuksen tapahtumista, jotka perustuvat lailliseen viranomaisen tekemään tietopyyntöön, jossa on vaadittu henkilötietojen luovuttamista Olevi Oy:ltä lainvoimaiselle viranomaiselle perustuen lain viranomaiselle suomiin toimivaltuuksiin pyytää henkilötiedon luovutusta Olevi Oy:n henkilörekisteristä.
                     ul
                         li Helmikuu 2025
