@@ -1,0 +1,127 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Olevi - se helppo suomalainen tunnistuspalvelu')
+        meta(name='author', content='Olevi')
+
+        title Olevi tunnistuspalvelu
+
+        link(rel="apple-touch-icon",sizes="180x180",href="https://misc.olevi.fi/assets/icon/apple-touch-icon.png")
+        link(rel="icon",type="image/png",sizes="32x32",href="https://misc.olevi.fi/assets/icon/favicon-32x32.png")
+        link(rel="icon",type="image/png",sizes="16x16",href="https://misc.olevi.fi/assets/icon/favicon-16x16.png")
+        link(rel="manifest",href="/site.webmanifest")
+        link(rel="mask-icon",href="https://misc.olevi.fi/assets/icon/safari-pinned-tab.svg",color="#5bbad5")
+        meta(name="msapplication-TileColor",content="#da532c")
+        meta(name="theme-color",content="#ffffff")
+
+
+        // Bootstrap icons
+        link(href='/font/bootstrap-icons.css', rel='stylesheet')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='/css/styles.css', rel='stylesheet')
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
+            .container.px-5
+                a.navbar-brand.fw-bold(href='/#page-top')
+                    img(src='https://misc.olevi.fi/assets/logo/Olevi-logo-white.svg', height="40px")
+                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.bi-list
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
+                        li.nav-item
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                                i.bi-box-arrow-up-right &nbsp; Demo
+                        li.nav-item
+                            div.dropdown
+                                button.btn.dropdown-toggle(type='button',data-bs-toggle='dropdown',aria-expanded='false') Lisätietoa Olevista
+                                ul.dropdown-menu
+                                    li
+                                        a.nav-link.me-lg-3(href='../yritys.html') Yritys
+                                    li
+                                        a.nav-link.me-lg-3(href='https://misc.olevi.fi/esite2024/Olevi-Esite-2024.pdf') Esite
+                                    //li
+                                        a.nav-link.me-lg-3(href='../brand.html') Tuotemerkki (brändi)
+                                    li
+                                        a.nav-link.me-lg-3(href='../tietosuoja.html') Tietosuoja
+                                    li
+                                        a.nav-link.me-lg-3(href='https://doc.olevi.fi')
+                                            i.bi-box-arrow-up-right &nbsp; Dokumentaatio
+                    button.btn.btn-olevi.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#feedbackModal')
+                        span.d-flex.align-items-center
+                            i.bi-chat-text-fill.me-2
+                            span.small Yhteydenotto
+
+
+
+        header.masthead
+            .container.px-5
+                .row.gx-5.align-items-center.justify-content-center
+                    .col-12
+                        .mb-lg-0.text-center.text-lg-start
+                            h5.display-5.lh-1.mb-3 Videotallenne nyt saatavilla: Muista käyttäjähallinta B2B-verkkokaupassa!
+                            p.lead.fw-normal 19.3.2025
+
+        section.bg-light.px-5.my-3
+            .container
+            .row.align-items-center.justify-content-center
+                .col-sm-12.col-md-8.pb-5
+                    h5 Videotallenne nyt saatavilla: Muista käyttäjähallinta B2B-verkkokaupassa!
+                    h6 Vantaa, Suomi – (19. maaliskuuta 2025)
+                    a(href="https://www.linkedin.com/events/7298669235134676993/")
+                        img(src='https://misc.olevi.fi/assets/img/250319-webinaari.jpeg',width="400px")
+
+                    p.mt-4 Videotallenne keskiviikkona 19.3.2025 järjestetystä webinaarista on nyt saatavilla. Kiitos kaikille osallistujille ja tavataan taas ensi kerralla.
+                    p.mt-4 Lyhyt videokooste alla
+                    <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/398080/ab3e1ab2-d0e2-4a00-9fba-9827c9b2a794?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
+                    p.mt-4 Katso koko tallenne tästä
+                    <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/398080/d8f51335-6c15-40ac-b8c0-c7453e1fb5c9?autoplay=false&loop=false&muted=false&preload=false&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
+                    p.mt-4 B2B-verkkokaupassa asiointiroolien hallinta on kriittistä, jotta tilausten hyväksyntä ja käyttöoikeudet vastaavat kaupallisia sopimuksia. Kun asiakasyrityksen työntekijät, konsultit ja alihankkijat tekevät tilauksia, kuinka varmistat, että prosessit toimivat oikein?
+                    p.mt-4 Kävimme läpi:
+                    ul
+                        li Kuinka määritellä ja hallita käyttäjärooleja sopimusperusteisesti
+                        li Miten ERP- ja CRM-integraatiot edistävät automaatiota
+                        li Parhaat käytännöt tilausten hyväksyntäprosessien ja käyttöoikeuksien hallintaan                        
+                    h6.mt-5 
+                        u Lisätietoa: Olevi
+                    p Olevi on kertakirjautumisen toteuttava standardeihin perustuva OIDC/SAML2 tunnistusratkaisu. Olevi tekee kirjautumisesta helppoa loppukäyttäjille ja asiakkaille. Olevi perustuu avoimen lähdekoodin Shibboleth IdP -tuotteeseen.
+                    p Lisätietoa: 
+                        a(href='https://www.olevi.fi') www.olevi.fi
+                    h6.mt-5
+                        u About Vorna ID
+                    p As a trustful ecosystem Vorna connects online services with potential and existing customers and distributors enabling clear and unique identification of legal entities engaging in business transactions.
+                    p Furthermore, Vorna ID serves online service providers – you simply implement the modular service in line with your requirements – from simple login and identification procedures to self-service business partner user administration. You benefit from simpler and continuous online processes.
+                    p Find out more at 
+                        a(href='https://vornaid.com/') vornaid.com
+
+        // Footer
+        footer.bg-black.text-center.py-5
+            .container.px-5
+                .text-white-50.small
+                    .mb-2 Olevi Oy | Y-tunnus:
+                        a(href='https://tietopalvelu.ytj.fi/yritys/3371637-1') 3371637-1 |
+                        a(href='/tietosuoja.html').link-underline-primary Tietosuoja |
+                        //-a(href='/Olevi-License-Terms.md') License Terms |
+                        | Tehty Suomessa
+                    //-span.mx-1 &middot;
+                    //-a(href='#!') Terms
+                    //-span.mx-1 &middot;
+                    //-a(href='#!') FAQ
+        
+        include ../includes/feedback-modal.pug
+
+        script(src='https://misc.olevi.fi/assets/js/jquery.min.js')
+        // Bootstrap core JS
+        //script(src='/js/popper.min.js')
+        script(src='https://misc.olevi.fi/assets/js/bootstrap.bundle.min.js')
+
+        // Core theme JS
+        script(src='/js/scripts.js')
