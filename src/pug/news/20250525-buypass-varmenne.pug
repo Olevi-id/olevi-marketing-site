@@ -1,0 +1,117 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Olevi - se helppo suomalainen tunnistuspalvelu')
+        meta(name='author', content='Olevi')
+
+        title Olevi tunnistuspalvelu
+
+        link(rel="apple-touch-icon",sizes="180x180",href="https://misc.olevi.fi/assets/icon/apple-touch-icon.png")
+        link(rel="icon",type="image/png",sizes="32x32",href="https://misc.olevi.fi/assets/icon/favicon-32x32.png")
+        link(rel="icon",type="image/png",sizes="16x16",href="https://misc.olevi.fi/assets/icon/favicon-16x16.png")
+        link(rel="manifest",href="/site.webmanifest")
+        link(rel="mask-icon",href="https://misc.olevi.fi/assets/icon/safari-pinned-tab.svg",color="#5bbad5")
+        meta(name="msapplication-TileColor",content="#da532c")
+        meta(name="theme-color",content="#ffffff")
+
+
+        // Bootstrap icons
+        link(href='/font/bootstrap-icons.css', rel='stylesheet')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='/css/styles.css', rel='stylesheet')
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
+            .container.px-5
+                a.navbar-brand.fw-bold(href='/#page-top')
+                    img(src='https://misc.olevi.fi/assets/logo/Olevi-logo-white.svg', height="40px")
+                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.bi-list
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
+                        li.nav-item
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                                i.bi-box-arrow-up-right &nbsp; Demo
+                        li.nav-item
+                            div.dropdown
+                                button.btn.dropdown-toggle(type='button',data-bs-toggle='dropdown',aria-expanded='false') Lisätietoa Olevista
+                                ul.dropdown-menu
+                                    li
+                                        a.nav-link.me-lg-3(href='../yritys.html') Yritys
+                                    li
+                                        a.nav-link.me-lg-3(href='https://misc.olevi.fi/esite2024/Olevi-Esite-2024.pdf') Esite
+                                    //li
+                                        a.nav-link.me-lg-3(href='../brand.html') Tuotemerkki (brändi)
+                                    li
+                                        a.nav-link.me-lg-3(href='../tietosuoja.html') Tietosuoja
+                                    li
+                                        a.nav-link.me-lg-3(href='https://doc.olevi.fi')
+                                            i.bi-box-arrow-up-right &nbsp; Dokumentaatio
+                    button.btn.btn-olevi.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#feedbackModal')
+                        span.d-flex.align-items-center
+                            i.bi-chat-text-fill.me-2
+                            span.small Yhteydenotto
+
+
+
+        header.masthead
+            .container.px-5
+                .row.gx-5.align-items-center.justify-content-center
+                    .col-12
+                        .mb-lg-0.text-center.text-lg-start
+                            h5.display-5.lh-1.mb-3 Buypass AS on Olevin uusi varmentaja
+                            p.lead.fw-normal 25.5.2025
+                            img(src='https://misc.olevi.fi/assets/img/olevi-buypass.png',width="400px")
+
+        section.bg-light.px-5.my-3
+            .container
+            .row.align-items-center.justify-content-center
+                .col-sm-12.col-md-8.pb-5
+                    h5 Buypass AS on Olevin uusi varmentaja
+                    h6 Vantaa, Suomi – (25. toukokuuta 2025)
+                    p.mt-4 Siirryimme testipalvelussamme käyttämään 
+                        a(href="https://www.buypass.com") Buypass AS
+                        |myöntämää varmennetta. Tällä muutoksella jatkamme 
+                        a(href="https://www.karidea.fi") Karidea
+                        |emoyhtiön käynnistämää tavoitetta painottaa Eurooppaa yhtiöiden käyttämissä palveluissa. Uuden varmenteen myöntäjän taustalla on 
+                        a(href="https://www.totalspecificsolutions.com") Total Specific Solutions.
+                        |Varmenteen myöntäjä on Norjassa, mutta omistaja on rekisteröitynyt Hollantiin.
+                    p.mt-4 Meillä ei ole epäilyksiä aiemman varmentajan luotettavuudesta, vaan haluamme tässäkin osa-alueessa siirtää toiminnan ja siihen liittyvän tietoliikenteen Euroopan mantereelle.
+
+                    h6.mt-5 
+                        u Lisätietoa: Olevi
+                    p Olevi on kertakirjautumisen toteuttava standardeihin perustuva OIDC/SAML2 tunnistusratkaisu. Olevi tekee kirjautumisesta helppoa loppukäyttäjille ja asiakkaille. Olevi perustuu avoimen lähdekoodin Shibboleth IdP -tuotteeseen.
+                    p 
+                        a(href='https://www.olevi.fi') www.olevi.fi
+
+        // Footer
+        footer.bg-black.text-center.py-5
+            .container.px-5
+                .text-white-50.small
+                    .mb-2 Olevi Oy | Y-tunnus:
+                        a(href='https://tietopalvelu.ytj.fi/yritys/3371637-1') 3371637-1 |
+                        a(href='/tietosuoja.html').link-underline-primary Tietosuoja |
+                        //-a(href='/Olevi-License-Terms.md') License Terms |
+                        | Tehty Suomessa
+                    //-span.mx-1 &middot;
+                    //-a(href='#!') Terms
+                    //-span.mx-1 &middot;
+                    //-a(href='#!') FAQ
+        
+        include ../includes/feedback-modal.pug
+
+        script(src='https://misc.olevi.fi/assets/js/jquery.min.js')
+        // Bootstrap core JS
+        //script(src='/js/popper.min.js')
+        script(src='https://misc.olevi.fi/assets/js/bootstrap.bundle.min.js')
+
+        // Core theme JS
+        script(src='/js/scripts.js')
