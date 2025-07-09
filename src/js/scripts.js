@@ -43,7 +43,7 @@ $('#submitButton').on('click', function(event) {
     $('#contactModalText').addClass('lead');
     $('#contactModalText').empty();
     $('#contactModalText').text('Odota hetki...');
-    $.post('https://closely-accepted-wolf.ngrok-free.app/send',
+    $.post('https://ch.olevi.fi/webemailer/send',
       { message: $('#message').val(),
                 flavor: 'olevi'
              }, function(data) {
