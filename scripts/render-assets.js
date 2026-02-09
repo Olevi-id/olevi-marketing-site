@@ -1,26 +1,33 @@
 'use strict';
-const fs = require('fs');
-const upath = require('upath');
-const sh = require('shelljs');
+import path from 'path';
+import sh from 'shelljs';
+import { fileURLToPath } from 'url';
 
-module.exports = function renderAssets() {
-    let sourcePath = upath.resolve(upath.dirname(__filename), '../src/assets');
-    let destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
-    
-    sh.cp('-R', sourcePath, destPath)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    sourcePath = upath.resolve(upath.dirname(__filename), '../src/font');
-    destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
-    sh.cp('-R', sourcePath, destPath)
+export default function renderAssets() {
+    const sourcePath = path.resolve(__dirname, '../src/assets');
+    const destPath = path.resolve(__dirname, '../dist/.');
 
-    sourcePath = upath.resolve(upath.dirname(__filename), '../src/Olevi-License-Terms.md');
-    destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
-    sh.cp(sourcePath, destPath)
-    
-    sourcePath = upath.resolve(upath.dirname(__filename), '../src/browserconfig.xml');
-    destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
-    sh.cp(sourcePath, destPath);
-    
-    sourcePath = upath.resolve(upath.dirname(__filename), '../src/site.webmanifest');
-    destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
-    sh.cp(sourcePath, destPath)};    
+    if (sh.test('-d', sourcePath)) {
+        sh.cp('-R', sourcePath, destPath);
+    }
+
+    const rootFiles = [
+        path.resolve(__dirname, '../src/site.webmanifest'),
+        path.resolve(__dirname, '../src/browserconfig.xml'),
+    ];
+
+    rootFiles.forEach(file => {
+        if (sh.test('-f', file)) {
+            sh.cp(file, destPath);
+        }
+    });
+
+    const bootstrapIconsPath = path.resolve(__dirname, '../node_modules/bootstrap-icons/font/*');
+    const destFontsPath = path.resolve(__dirname, '../dist/css/font');
+
+    sh.mkdir('-p', destFontsPath);
+    sh.cp('-R', bootstrapIconsPath, destFontsPath);
+};

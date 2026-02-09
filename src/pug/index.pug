@@ -10,17 +10,17 @@ html(lang='en')
 
         title Olevi tunnistuspalvelu
 
-        link(rel="apple-touch-icon",sizes="180x180",href="https://misc.olevi.fi/assets/icon/apple-touch-icon.png")
-        link(rel="icon",type="image/png",sizes="32x32",href="https://misc.olevi.fi/assets/icon/favicon-32x32.png")
-        link(rel="icon",type="image/png",sizes="16x16",href="https://misc.olevi.fi/assets/icon/favicon-16x16.png")
-        link(rel="manifest",href="/site.webmanifest")
-        link(rel="mask-icon",href="https://misc.olevi.fi/assets/icon/safari-pinned-tab.svg",color="#5bbad5")
-        meta(name="msapplication-TileColor",content="#da532c")
-        meta(name="theme-color",content="#ffffff")
+        link(rel="apple-touch-icon", sizes="180x180", href="https://misc.olevi.fi/assets/icon/apple-touch-icon.png")
+        link(rel="icon", type="image/png", sizes="32x32", href="https://misc.olevi.fi/assets/icon/favicon-32x32.png")
+        link(rel="icon", type="image/png", sizes="16x16", href="https://misc.olevi.fi/assets/icon/favicon-16x16.png")
+        link(rel="manifest", href="/site.webmanifest")
+        link(rel="mask-icon", href="https://misc.olevi.fi/assets/icon/safari-pinned-tab.svg", color="#5bbad5")
+        meta(name='msapplication-TileColor', content="#da532c")
+        meta(name="theme-color", content="#ffffff")
 
 
         // Bootstrap icons
-        link(href='/font/bootstrap-icons.css', rel='stylesheet')
+        link(href='/css/font/bootstrap-icons.css', rel='stylesheet')
 
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
@@ -38,11 +38,11 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
                         li.nav-item
-                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/')
                                 i.bi-box-arrow-up-right &nbsp; Demo
                         li.nav-item
                             div.dropdown
-                                button.btn.dropdown-toggle(type='button',data-bs-toggle='dropdown',aria-expanded='false') Lisätietoa Olevista
+                                button.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false') Lisätietoa Olevista
                                 ul.dropdown-menu
                                     li
                                         a.nav-link.me-lg-3(href='yritys.html') Yritys
@@ -71,11 +71,11 @@ html(lang='en')
                                 .mb-5.mb-lg-0.text-center.text-lg-start
                                     h3.display-3.lh-1.mb-3 Helppoa tunnistamista
                             .col-7.mb-4.col-lg-12
-                                p Ota Olevi heti veloituksetta testikäyttöön demopalvelussa, tai perustetaan teille oma instanssi. 
-                                p 
-                                    a.btn.btn-olevi.rounded-pill.px-4.py-3.my-2(href='https://test-idp.olevi.fi/mgmforms/') 
+                                p Ota Olevi heti veloituksetta testikäyttöön demopalvelussa, tai perustetaan teille oma instanssi.
+                                p
+                                    a.btn.btn-olevi.rounded-pill.px-4.py-3.my-2(href='https://test-idp.olevi.fi/mgmforms/')
                                         span.d-flex.align-items-center
-                                            i.bi-box-arrow-up-right 
+                                            i.bi-box-arrow-up-right
                                             |  &nbsp; Kokeile demo-palvelussa
 
                     .col-lg-6.text-center
@@ -95,23 +95,23 @@ html(lang='en')
                         p Olevi toteuttaa mm. OIDC- ja SAML-tunnistusprotokollia kytkeytyäkseen tunnistusvälineisiin. Tunnistamiseen tukeutuvat palvelut kytkeytyvät Oleviin käyttäen samoja protokollia. Olevi voi kytkeytyä monenlaisiin käyttäjätietokantoihin.
                 div.row.justify-content-center.mt-3
                     div.col-md-3
-                        div.col-12.mb-2 
+                        div.col-12.mb-2
                             i.icon.bi-x-circle
                         div.col-12
                             strong
                                 p Olevi käsittelee henkilötietoja ainoastaan tunnistustapahtuman yhteydessä
                     div.col-xs-6.col-md-3
-                        div.col-12.mb-2 
+                        div.col-12.mb-2
                             i.icon.bi-box-arrow-in-right
                             strong
                                 p Kirjaudu useisiin palveluihin yhdellä kertaa
                     div.col-xs-6.col-md-3
-                        div.col-12.mb-2 
+                        div.col-12.mb-2
                             i.icon.bi-lock
                             strong
                                 p Turvallinen vaihtoehto salasanoille
                     div.col-xs-6.col-md-3
-                        div.col-12.mb-2 
+                        div.col-12.mb-2
                             i.icon.bi-check2-square
                             strong
                                 p Helpompaa sovellusten ylläpitoa ja kehitystä
@@ -135,23 +135,23 @@ html(lang='en')
                         div.col-12
                             p Salasanat jäävät historiaan. Käyttäjän valitessa Olevi muistaa tunnistamisen. Vaikeita ja pitkiä salasanoja ei tarvitse muistaa. Salasanan vaihtaminen on menneisyyttä.
                             p Käyttäjä tallentaa laitetunnisteen, joka liitetään selaimeen. Tunnisteina voi käyttää sormenjälkeä, kasvotunnistusta tai laitteen pääsykoodia. Kirjautuminen on turvallista, kun se onnistuu vain käyttäjän selaimen ja laitetunnisteen yhdistelmällä.
-                            p Käyttäjän tunnistetta ei tallenneta Olevin tietokantaan tai muuten keskitetysti, vaan tunnistamisen tekijät ovat suojattuna käyttäjän hallussa. Varas ei voi saada tunnisteita haltuunsa, sillä ne on suojattu laitteen turvapiiriin. 
+                            p Käyttäjän tunnistetta ei tallenneta Olevin tietokantaan tai muuten keskitetysti, vaan tunnistamisen tekijät ovat suojattuna käyttäjän hallussa. Varas ei voi saada tunnisteita haltuunsa, sillä ne on suojattu laitteen turvapiiriin.
                     div.col-md-5.col-xs-12.ms-3.mt-3
                         div.col-12
                             p
-                                img(src='https://misc.olevi.fi/assets/icon/Sormenjalkitunnistus.svg') 
+                                img(src='https://misc.olevi.fi/assets/icon/Sormenjalkitunnistus.svg')
                                 |  Sormenjälkitunnistus
                             p
-                                img(src='https://misc.olevi.fi/assets/icon/Kasvotunnistus.svg') 
+                                img(src='https://misc.olevi.fi/assets/icon/Kasvotunnistus.svg')
                                 |  Kasvotunnistus
                             p
-                                img(src='https://misc.olevi.fi/assets/icon/Henkilo-ja-Sote-kortti.svg') 
+                                img(src='https://misc.olevi.fi/assets/icon/Henkilo-ja-Sote-kortti.svg')
                                 |  Henkilö- ja Sote-kortti
                             p
-                                img(src='https://misc.olevi.fi/assets/icon/Pankkitunnistus.svg') 
+                                img(src='https://misc.olevi.fi/assets/icon/Pankkitunnistus.svg')
                                 |  Pankkitunnistus
                             p
-                                img(src='https://misc.olevi.fi/assets/icon/Fido2-tunnistaminen.svg') 
+                                img(src='https://misc.olevi.fi/assets/icon/Fido2-tunnistaminen.svg')
                                 |  Fido2-tunnistaminen
 
         section.pricing
@@ -160,7 +160,7 @@ html(lang='en')
                     .col-12
                         h2.my-4 Hintaesimerkkejä
                     .col-12.mb-4
-                        p Katso tarkempi selvitys hinnoittelun rakenteesta 
+                        p Katso tarkempi selvitys hinnoittelun rakenteesta
                             a(href='https://doc.olevi.fi/pages/a-general/2-projectStructure/#purchasing-olevi') ohjesivulta (englanniksi)
                             |.
                         p Tässä mainitut hinnat ovat oletuksia todennäköisestä hintatasosta. Olevi määrittelee modulien lisenssien hinnan. Tukipalvelun ja alustapalvelun hinnoittelusta neuvottelet jälleenmyyjäsi kanssa. Kysy aina hintatarkennus
@@ -172,7 +172,7 @@ html(lang='en')
                             .accordion-item
                                 h2.accordion-header
                                     button.accordion-button(
-                                        type='button', 
+                                        type='button',
                                         data-bs-toggle="collapse",
                                         data-bs-target="#collapseDev",
                                         aria-expanded="true",
@@ -181,9 +181,9 @@ html(lang='en')
                                     .accordion-body
                                         h2.text-center.mb-3 0 €
                                         p.text-center
-                                            a.btn.btn-olevi.rounded-pill.px-4.py-3.my-2(href='https://test-idp.olevi.fi/mgmforms/') 
+                                            a.btn.btn-olevi.rounded-pill.px-4.py-3.my-2(href='https://test-idp.olevi.fi/mgmforms/')
                                                 span.d-flex.align-items-center
-                                                    i.bi-box-arrow-up-right 
+                                                    i.bi-box-arrow-up-right
                                                     |  &nbsp; Kokeile demo-palvelussa
                                         ul.my-3
                                             li Pääsy yleiseen SaaS-instanssiin testaus- ja kehityskäytössä
@@ -192,9 +192,9 @@ html(lang='en')
                     .col-sm-5.my-4
                         .accordion#hintaAloitus
                             .accordion-item
-                                h2.accordion-header 
+                                h2.accordion-header
                                     button.accordion-button(
-                                        type='button', 
+                                        type='button',
                                         data-bs-toggle="collapse",
                                         data-bs-target="#collapseAloitus",
                                         aria-expanded="true",
@@ -208,7 +208,7 @@ html(lang='en')
                             .accordion-item
                                 h2.accordion-header
                                     button.accordion-button.collapsed(
-                                        type='button', 
+                                        type='button',
                                         data-bs-toggle="collapse",
                                         data-bs-target="#aloitusMod",
                                         aria-expanded="true",
@@ -221,7 +221,7 @@ html(lang='en')
                             .accordion-item
                                 h2.accordion-header
                                     button.accordion-button.collapsed(
-                                        type='button', 
+                                        type='button',
                                         data-bs-toggle="collapse",
                                         data-bs-target="#aloitusSLA",
                                         aria-expanded="true",
@@ -231,7 +231,7 @@ html(lang='en')
                             .accordion-item
                                 h2.accordion-header
                                     button.accordion-button.collapsed(
-                                        type='button', 
+                                        type='button',
                                         data-bs-toggle="collapse",
                                         data-bs-target="#aloitusPlatta",
                                         aria-expanded="true",
@@ -243,7 +243,7 @@ html(lang='en')
                             .accordion-item
                                 h2.accordion-header
                                     button.accordion-button(
-                                        type='button', 
+                                        type='button',
                                         data-bs-toggle="collapse",
                                         data-bs-target="#collapsePerus",
                                         aria-expanded="true",
@@ -258,7 +258,7 @@ html(lang='en')
                             .accordion-item
                                 h2.accordion-header
                                     button.accordion-button.collapsed(
-                                        type='button', 
+                                        type='button',
                                         data-bs-toggle="collapse",
                                         data-bs-target="#perusMod",
                                         aria-expanded="true",
@@ -274,7 +274,7 @@ html(lang='en')
                             .accordion-item
                                 h2.accordion-header
                                     button.accordion-button.collapsed(
-                                        type='button', 
+                                        type='button',
                                         data-bs-toggle="collapse",
                                         data-bs-target="#perusSLA",
                                         aria-expanded="true",
@@ -285,23 +285,23 @@ html(lang='en')
                                             li asiakkaan oma puhelinnumero tukipalveluun
                                             li häiriönhallinta
                                             li ratkaisun hallintaan liittyvät tavanomaiset ylläpitotyöt
-                                            li ratkaisun komponenttien tavanomaiset minor-päivitykset 
+                                            li ratkaisun komponenttien tavanomaiset minor-päivitykset
                                             li ratkaisun komponenttien tietoturvapäivitykset
                                             li ratkaisun valvonta
                                             li SLA-raportointi
                             .accordion-item
                                 h2.accordion-header
                                     button.accordion-button.collapsed(
-                                        type='button', 
+                                        type='button',
                                         data-bs-toggle="collapse",
                                         data-bs-target="#perusPlatta",
                                         aria-expanded="true",
                                         aria-controls="perusPlatta") Alustapalvelu - 800 €
                                 .accordion-collapse.collapse#perusPlatta
-                                    .accordion-body 
+                                    .accordion-body
                                         p Yrityksen erillinen pilvialusta
                                         p Mahdollisuus myös muiden palvelujen toteuttamiseen samalla pilvialustalla
-                                    
+
 
         // News
         section.news
@@ -345,7 +345,7 @@ html(lang='en')
                                 p 27.2.2025
                                 h5
                                     a(href='/news/20250227-olevi-b2b-webinaari.html') Webinaari: Muista käyttäjähallinta B2B-verkkokaupassa!
-                                p Tule mukaan 19.3.2025 klo 09:00. Ilmoittaudu Webinaariin 
+                                p Tule mukaan 19.3.2025 klo 09:00. Ilmoittaudu Webinaariin
                                     a(href="https://www.linkedin.com/events/7298669235134676993/") LinkedIn-palvelussa.
                     .col-lg-6.col-xl-5.m-2
                         .card
@@ -358,7 +358,7 @@ html(lang='en')
                         .card
                             .card-body
                                 p 8.3.2024
-                                h5 
+                                h5
                                     a(href='/news/20240308-olevi-vorna.html') Olevi + Vorna ID for Business Customer IAM
                                 p An innovative partnership to govern access in business ecosystems with customer identity and access management.
 
@@ -375,13 +375,10 @@ html(lang='en')
                     //-a(href='#!') Terms
                     //-span.mx-1 &middot;
                     //-a(href='#!') FAQ
-        
+
         include includes/feedback-modal.pug
 
-        script(src='https://misc.olevi.fi/assets/js/jquery.min.js')
-        // Bootstrap core JS
-        script(src='https://misc.olevi.fi/assets/js/popper.min.js')
-        script(src='https://misc.olevi.fi/assets/js/bootstrap.bundle.min.js')
+        include includes/scripts.pug
 
         // Core theme JS
-        script(src='./js/scripts.js')
+        script(src='/js/scripts.js')

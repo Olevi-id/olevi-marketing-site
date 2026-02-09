@@ -1,0 +1,80 @@
+name: Build and Deploy to BunnyCDN
+# Reference: Bunny Storage HTTP API — https://docs.bunny.net/storage/http
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Perform a dry run (true/false)'
+        required: false
+        default: 'false'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run || 'true' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Build HTTP uploader image
+        run: |
+          if [ -d scripts/bunny-upload-http ]; then
+            docker build -t bunny-uploader-http scripts/bunny-upload-http
+          else
+            echo "HTTP uploader directory not found; skipping build."
+          fi
+
+      - name: Check required secrets
+        if: env.DRY_RUN != 'true'
+        env:
+          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
+          BUNNY_STORAGE_ZONE: ${{ vars.BUNNY_STORAGE_ZONE }}
+          BUNNY_REGION: ${{ vars.BUNNY_REGION }}
+        run: |
+          if [ -z "$BUNNY_API_KEY" ] || [ -z "$BUNNY_STORAGE_ZONE" ]; then
+            echo "Required secrets BUNNY_API_KEY and BUNNY_STORAGE_ZONE are not set. Aborting.";
+            exit 1;
+          fi
+          echo "Required secrets present. Proceeding with deploy."
+
+      - name: Run HTTP uploader
+        env:
+          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
+          BUNNY_STORAGE_ZONE: ${{ vars.BUNNY_STORAGE_ZONE }}
+          BUNNY_REGION: ${{ vars.BUNNY_REGION }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run || 'true' }}
+        run: |
+          set -e
+          IMAGE="bunny-uploader-http"
+
+          if ! docker image inspect "$IMAGE" > /dev/null 2>&1; then
+            echo "Docker image $IMAGE not found. Aborting."
+            exit 1
+          fi
+
+          docker run --rm \
+            -e BUNNY_REGION="${BUNNY_REGION}" \
+            -e BUNNY_API_KEY="${BUNNY_API_KEY}" \
+            -e BUNNY_STORAGE_ZONE="${BUNNY_STORAGE_ZONE}" \
+            -e DELETE_MISSING="true" \
+            -e DRY_RUN="$DRY_RUN" \
+            -v "$GITHUB_WORKSPACE/dist:/site:ro" \
+            "$IMAGE"

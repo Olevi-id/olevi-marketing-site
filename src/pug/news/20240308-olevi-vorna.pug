@@ -38,7 +38,7 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
                         li.nav-item
-                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/')
                                 i.bi-box-arrow-up-right &nbsp; Demo
                         li.nav-item
                             div.dropdown
@@ -82,32 +82,32 @@ html(lang='en')
                         a(href='https://www.olevi.fi/') Olevi (olevi.fi)
                         |, an easy identity provider focused on various trust network needs, jointly announced their collaboration to help solve e-identity management challenges in public and private services.
                     p CIAM solutions offered today in the market have several important shortcomings: use cases limited to single sign-on, authorization services not suitable for managing access in the business ecosystem, user on-boarding functionality often limited to consumer use cases.
-                    p 
+                    p
                         a(href='https://www.traficom.fi/sites/default/files/media/publication/Sähköisen_tunnistamisen_markkinat_-_Sähköinen%20tunnistaminen%20turvallisen%20asioinnin%20mahdollistajana%2017%2003%202021p.pdf') Study
-                        |done by Traficom showed that 18% of the respondees had identified a need for an authentication service, which allows people to act on behalf of an organization. Vorna ID e-Authorizations enable an organization to authorise another organization to act on its behalf in e-services. These mandates also allow organizations to allow 3rd parties to act on their behalf. Vorna ID's Customer Identity Management solution can be used in addition to Olevi’s authentication service, to improve customer on-boarding and lifecycle management through features such as electronic mandates and developer-friendly API's. Find out more at 
+                        |done by Traficom showed that 18% of the respondees had identified a need for an authentication service, which allows people to act on behalf of an organization. Vorna ID e-Authorizations enable an organization to authorise another organization to act on its behalf in e-services. These mandates also allow organizations to allow 3rd parties to act on their behalf. Vorna ID's Customer Identity Management solution can be used in addition to Olevi’s authentication service, to improve customer on-boarding and lifecycle management through features such as electronic mandates and developer-friendly API's. Find out more at
                         a(href='https://vornaid.com/capabilities') vornaid.com/capabilities
-                    blockquote.blockquote 
+                    blockquote.blockquote
                         b Kari Laalo
-                        |, CEO and Founder at Olevi said, 
+                        |, CEO and Founder at Olevi said,
                         em “Vorna ID’s vision in access governance for business ecosystems shares our vision of enabling users to access digital services easily. They will be a key partner for us to provide the value for B2B CIAM use cases in Finland and beyond.”
-                    blockquote.blockquote 
+                    blockquote.blockquote
                         b Kari Nousiainen
                         |,  Board member of Vorna ID, said,
                         em “The lack of widely used B2B customer identity management solution is causing lack of trust in digital transactions, delays in establishing business relations online and unnecessary operations costs. The innovative partnership with Olevi provides an opportunity for us to better help organizations, due to their expertise in both the enterprise and consumer identity and access management”
-                    p For more information, contact 
+                    p For more information, contact
                         a(href='https://vornaid.com/get-started') Vorna ID
                         | or
                         a(href='https://www.olevi.fi') Olevi
-                    h6.mt-5 
+                    h6.mt-5
                         u About Olevi
                     p Olevi Identity Provider is an OIDC/SAML2 compatible implementation to provide standards based authentication in simple terms both for end-users and clients. Olevi is based on Shibboleth IdP open source software.
-                    p Find out more at 
+                    p Find out more at
                         a(href='https://www.olevi.fi') www.olevi.fi
                     h6.mt-5
                         u About Vorna ID
                     p As a trustful ecosystem Vorna connects online services with potential and existing customers and distributors enabling clear and unique identification of legal entities engaging in business transactions.
                     p Furthermore, Vorna ID serves online service providers – you simply implement the modular service in line with your requirements – from simple login and identification procedures to self-service business partner user administration. You benefit from simpler and continuous online processes.
-                    p Find out more at 
+                    p Find out more at
                         a(href='https://vornaid.com/') vornaid.com
 
         // Footer
@@ -123,13 +123,10 @@ html(lang='en')
                     //-a(href='#!') Terms
                     //-span.mx-1 &middot;
                     //-a(href='#!') FAQ
-        
+
         include ../includes/feedback-modal.pug
 
-        script(src='https://misc.olevi.fi/assets/js/jquery.min.js')
-        // Bootstrap core JS
-        //script(src='https://misc.olevi.fi/assets/js/popper.min.js')
-        script(src='https://misc.olevi.fi/assets/js/bootstrap.bundle.min.js')
+        include ../includes/scripts.pug
 
         // Core theme JS
         script(src='/js/scripts.js')

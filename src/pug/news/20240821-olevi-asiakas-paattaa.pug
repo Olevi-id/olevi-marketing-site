@@ -38,7 +38,7 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
                         li.nav-item
-                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/')
                                 i.bi-box-arrow-up-right &nbsp; Demo
                         li.nav-item
                             div.dropdown
@@ -77,9 +77,9 @@ html(lang='en')
                     h5 Asiakas päättää hinnan
                     h6 Vantaa, Suomi – (21. elokuuta 2024)
                     img(src='https://misc.karidea.fi/assets/img/asiakas-paattaa-hinnan.png',width="400px")
-                    p.mt-4 
+                    p.mt-4
                         a(href='https://www.karidea.fi') Karidea
-                        |ja 
+                        |ja
                         a(href='https://www.olevi.fi/') Olevi
                         |toteuttavat yhteistyössä kampanjan, jossa asiakas päättää palvelun hinnan (min 35 € + alv / kk enintään 6 kk:n ajan).
                     p Hinta muodostuu Karidean alustamaksusta (30 € / kk), Olevi-käyttöoikeuden lähtöhinnasta (5 € / kk) ja asiakkaan tarjouksesta. Hintoihin lisätään arvonlisävero (alv). Minimihinta on siis 35 € / kk + alv. Karidea laskuttaa asiakasta jokaisen kuukauden viimeisenä arkipäivänä (maksuehto 14 vrk).
@@ -90,15 +90,15 @@ html(lang='en')
                     p Anna tarjouksesi yhteydenottolomakkeella
                         a(href='https://www.karidea.fi/#contact') Karidea
                         | verkkosivulla. Muista kertoa yhteystieto, johon voimme ottaa yhteyttä instanssin käyttöönottoon liittyvistä käytännön asioista.
-                    h6.mt-5 
+                    h6.mt-5
                         u Lisätietoa: Olevi
                     p Olevi on kertakirjautumisen toteuttava standardeihin perustuva OIDC/SAML2 tunnistusratkaisu. Olevi tekee kirjautumisesta helppoa loppukäyttäjille ja asiakkaille. Olevi perustuu avoimen lähdekoodin Shibboleth IdP -tuotteeseen.
-                    p Lisätietoa: 
+                    p Lisätietoa:
                         a(href='https://www.olevi.fi') www.olevi.fi
                     h6.mt-5
                         u Lisätietoa: Karidea
                     p Karidea Oy on tunnistamisen ja pääsynhallinnan erikoistunut asiantuntija sekä tunnistamisen teknologioiden kehittäjä
-                    p Lue lisää: 
+                    p Lue lisää:
                         a(href='https://www.karidea.fi/') www.karidea.fi
 
         // Footer
@@ -114,13 +114,10 @@ html(lang='en')
                     //-a(href='#!') Terms
                     //-span.mx-1 &middot;
                     //-a(href='#!') FAQ
-        
+
         include ../includes/feedback-modal.pug
 
-        script(src='https://misc.olevi.fi/assets/js/jquery.min.js')
-        // Bootstrap core JS
-        //script(src='/js/popper.min.js')
-        script(src='https://misc.olevi.fi/assets/js/bootstrap.bundle.min.js')
+        include ../includes/scripts.pug
 
         // Core theme JS
         script(src='/js/scripts.js')

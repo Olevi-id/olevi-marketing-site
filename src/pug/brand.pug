@@ -37,7 +37,7 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
                         li.nav-item
-                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/')
                                 i.bi-box-arrow-up-right &nbsp; Demo
                         li.nav-item
                             div.dropdown
@@ -81,7 +81,7 @@ html(lang='en')
                             tbody
                                 tr
                                     th Suositeltu painotalo
-                                    td 
+                                    td
                                         a(href="https://niini.fi/tuote/kayntikortti-classic-90x50/") Niini verkkokauppa
                                 tr
                                     th Koko
@@ -113,21 +113,21 @@ html(lang='en')
                             tbody
                                 tr
                                     th Olevi Logo Sininen
-                                    td 
+                                    td
                                       a(href="https://misc.olevi.fi/assets/logo/Olevi-logo-blue.svg")
                                         img(src="https://misc.olevi.fi/assets/logo/Olevi-logo-blue.svg",style="height: 4em; border-style: solid; border-width: thin; border-color: #0c0c0d; padding: 1em 2em 1em 2em; border-radius: 10px; background-color: #fdfafa;")
                                 tr
                                     th Olevi Logo Valkoinen
-                                    td 
+                                    td
                                       a(href="https://misc.olevi.fi/assets/logo/Olevi-logo-white.svg")
                                         img(src="https://misc.olevi.fi/assets/logo/Olevi-logo-white.svg",style="height: 4em; border-style: solid; border-width: thin; border-color: #fdfafa; padding: 1em 2em 1em 2em; border-radius: 10px; background-color: #2502ff;")
-                        
+
                 .row
                     .col-lg-8.col-12
                         h2.lead.fw-normal.my-3 Määritykset
                         p Fontissa on huomioitu luettavuus ja selkeä visuaalista tyyliä tukeva muotokieli. Fontti löytyy useista yleisesti saatavilla olevista ja avoimista kirjastoista.
                         p Värimaailman pohjana on käytetty synbolisia arvoja, joista värimaailma koostuu. Teemat johtuvat visuaalisen konseptin ajattelusta.
-                        p 
+                        p
                             b Vahva pohja &bull; Luottamus &bull; Vapaus
                         table(style="width:auto;").table.table-sm
                             caption(style='display: none;') Määritykset
@@ -137,22 +137,22 @@ html(lang='en')
                                     td Familjen Grotesk
                                 tr
                                     th Pääväri valkoinen graniitti
-                                    td 
+                                    td
                                       span(style="display: inline-block; height: 95%; width: 3em; border-style: solid; border-width: thin; border-color: #0c0c0d; background-color: #fdfafa") &nbsp;
                                       |#FDFAFA
                                 tr
                                     th Pääväri musta graniitti
-                                    td 
+                                    td
                                       span(style="display: inline-block; height: 95%; width: 3em; background-color: #0c0c0d") &nbsp;
                                       |#0C0C0D
                                 tr
                                     th Pääväri kirkas järvi
-                                    td 
+                                    td
                                       span(style="display: inline-block; height: 95%; width: 3em; background-color: #2502ff") &nbsp;
                                       | #2502FF
                                 tr
                                     th Toissijainen väri kevätlehdet
-                                    td 
+                                    td
                                       span(style="display: inline-block; height: 95%; width: 3em; background-color: #4db700") &nbsp;
                                       | #4DB700
                     //-.col-12
@@ -173,7 +173,7 @@ html(lang='en')
                                     tr
                                         th Jälkikäsittely
                                         td Rei'itys käsin, metalliwire (ei erillisiä kansia)
-                    
+
 
 
         // Footer
@@ -189,13 +189,10 @@ html(lang='en')
                     //-a(href='#!') Terms
                     //-span.mx-1 &middot;
                     //-a(href='#!') FAQ
-        
+
         include includes/feedback-modal.pug
 
-        script(src='https://misc.olevi.fi/assets/js/jquery.min.js')
-        // Bootstrap core JS
-        script(src='https://misc.olevi.fi/assets/js/popper.min.js')
-        script(src='https://misc.olevi.fi/assets/js/bootstrap.bundle.min.js')
+        include includes/scripts.pug
 
         // Core theme JS
-        script(src='./js/scripts.js')
+        script(src='/js/scripts.js')

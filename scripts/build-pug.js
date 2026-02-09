@@ -1,9 +1,13 @@
 'use strict';
-const upath = require('upath');
-const sh = require('shelljs');
-const renderPug = require('./render-pug');
+import path from 'path';
+import sh from 'shelljs';
+import renderPug from './render-pug.js';
+import { fileURLToPath } from 'url';
 
-const srcPath = upath.resolve(upath.dirname(__filename), '../src');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const srcPath = path.resolve(__dirname, '../src');
 
 sh.find(srcPath).forEach(_processFile);
 

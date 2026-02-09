@@ -1,6 +1,6 @@
 {
-    "title": "New Age",
-    "name": "startbootstrap-new-age",
+    "title": "Olevi Marketing Site",
+    "name": "olevi-marketing-site",
     "version": "6.0.7",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
@@ -33,19 +33,20 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-new-age.git"
+        "url": "https://github.com/Olevi-id/olevi-marketing-site"
     },
     "dependencies": {
-        "bootstrap": "5.2.3"
+        "bootstrap": "5.3.8",
+        "bootstrap-icons": "1.13.1"
     },
     "devDependencies": {
         "autoprefixer": "10.4.14",
-        "browser-sync": "2.29.1",
+        "browser-sync": "^3.0.4",
         "chokidar": "3.5.3",
         "concurrently": "6.3.0",
-        "postcss": "8.4.21",
+        "postcss": "^8.5.6",
         "prettier": "2.8.6",
-        "pug": "3.0.2",
+        "pug": "^3.0.3",
         "sass": "1.60.0",
         "shelljs": "0.8.5",
         "upath": "2.0.1"

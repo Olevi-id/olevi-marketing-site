@@ -1,26 +1,21 @@
 'use strict';
-const fs = require('fs');
-const packageJSON = require('../package.json');
-const upath = require('upath');
-const sh = require('shelljs');
+import path from 'path';
+import sh from 'shelljs';
+import { fileURLToPath } from 'url';
 
-module.exports = function renderScripts() {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    const sourcePath = upath.resolve(upath.dirname(__filename), '../src/js');
-    const destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
-    
-    sh.cp('-R', sourcePath, destPath)
+export default function renderScripts() {
+    const sourcePath = path.resolve(__dirname, '../src/js');
+    const destPath = path.resolve(__dirname, '../dist/.');
 
-    const sourcePathScriptsJS = upath.resolve(upath.dirname(__filename), '../src/js/scripts.js');
-    const destPathScriptsJS = upath.resolve(upath.dirname(__filename), '../dist/js/scripts.js');
-    
-    const copyright = `/*!
-* Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
-* Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
-* Licensed under ${packageJSON.license} (https://github.com/StartBootstrap/${packageJSON.name}/blob/master/LICENSE)
-*/
-`
-    const scriptsJS = fs.readFileSync(sourcePathScriptsJS);
-    
-    fs.writeFileSync(destPathScriptsJS, copyright + scriptsJS);
+    sh.cp('-R', sourcePath, destPath);
+
+    const bootstrapJS = path.resolve(__dirname, '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
+    const bootstrapJSMap = path.resolve(__dirname, '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map');
+    const destJSPath = path.resolve(__dirname, '../dist/js');
+
+    sh.cp(bootstrapJS, destJSPath);
+    sh.cp(bootstrapJSMap, destJSPath);
 };

@@ -1,42 +1,36 @@
 'use strict';
-const autoprefixer = require('autoprefixer')
-const fs = require('fs');
-const packageJSON = require('../package.json');
-const upath = require('upath');
-const postcss = require('postcss')
-const sass = require('sass');
-const sh = require('shelljs');
+import autoprefixer from 'autoprefixer';
+import fs from 'fs';
+import path from 'path';
+import postcss from 'postcss';
+import sass from 'sass';
+import sh from 'shelljs';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const stylesPath = '../src/scss/styles.scss';
-const destPath = upath.resolve(upath.dirname(__filename), '../dist/css/styles.css');
+const destPath = path.resolve(__dirname, '../dist/css/styles.css');
 
-module.exports = function renderSCSS() {
-    
-    const results = sass.renderSync({
-        data: entryPoint,
-        includePaths: [
-            upath.resolve(upath.dirname(__filename), '../node_modules')
+export default function renderSCSS() {
+
+    const results = sass.compile(path.resolve(__dirname, '../src/scss/styles.scss'), {
+        loadPaths: [
+            path.resolve(__dirname, '../node_modules')
         ],
-      });
+    });
 
-    const destPathDirname = upath.dirname(destPath);
+    const compiledCss = results.css;
+
+    const destPathDirname = path.dirname(destPath);
     if (!sh.test('-e', destPathDirname)) {
         sh.mkdir('-p', destPathDirname);
     }
 
-    postcss([ autoprefixer ]).process(results.css, {from: 'styles.css', to: 'styles.css'}).then(result => {
+    postcss([ autoprefixer ]).process(compiledCss, {from: 'styles.css', to: 'styles.css'}).then(result => {
         result.warnings().forEach(warn => {
             console.warn(warn.toString())
         })
-        fs.writeFileSync(destPath, result.css.toString());
+        fs.writeFileSync(destPath, result.css);
     })
 
 };
-
-const entryPoint = `/*!
-* Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
-* Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
-* Licensed under ${packageJSON.license} (https://github.com/StartBootstrap/${packageJSON.name}/blob/master/LICENSE)
-*/
-@import "${stylesPath}"
-`

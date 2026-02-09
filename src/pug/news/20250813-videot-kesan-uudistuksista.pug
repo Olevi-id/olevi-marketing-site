@@ -38,7 +38,7 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
                         li.nav-item
-                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/')
                                 i.bi-box-arrow-up-right &nbsp; Demo
                         li.nav-item
                             div.dropdown
@@ -85,13 +85,13 @@ html(lang='en')
                         |.
                     p Uudistuksista on lisätietoa myös
                         a(href="https://doc.olevi.fi/pages/a-general/4-otherPlugins/") Olevin dokumentaatiosivulla
-                        | (englannin kielellä) . 
+                        | (englannin kielellä) .
                     div(style="position:relative;padding-top:56.25%;")
                         iframe(src="https://iframe.mediadelivery.net/embed/398080/c4e607ac-3426-43df-81b2-a50440d00744?autoplay=false&loop=false&muted=false&preload=false&responsive=true", loading="lazy", style="border:0;position:absolute;top:0;height:100%;width:100%;", allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;", allowfullscreen="true")
-                    p.mt-5 
+                    p.mt-5
                         u Lisätietoa: Olevi
                     p Olevi on kertakirjautumisen toteuttava standardeihin perustuva OIDC/SAML2 tunnistusratkaisu. Olevi tekee kirjautumisesta helppoa loppukäyttäjille ja asiakkaille. Olevi perustuu avoimen lähdekoodin Shibboleth IdP -tuotteeseen.
-                    p 
+                    p
                         a(href='https://www.olevi.fi') www.olevi.fi
 
         // Footer
@@ -107,13 +107,10 @@ html(lang='en')
                     //-a(href='#!') Terms
                     //-span.mx-1 &middot;
                     //-a(href='#!') FAQ
-        
+
         include ../includes/feedback-modal.pug
 
-        script(src='https://misc.olevi.fi/assets/js/jquery.min.js')
-        // Bootstrap core JS
-        //script(src='/js/popper.min.js')
-        script(src='https://misc.olevi.fi/assets/js/bootstrap.bundle.min.js')
+        include ../includes/scripts.pug
 
         // Core theme JS
         script(src='/js/scripts.js')

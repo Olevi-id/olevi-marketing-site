@@ -38,7 +38,7 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
                         li.nav-item
-                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/')
                                 i.bi-box-arrow-up-right &nbsp; Demo
                         li.nav-item
                             div.dropdown
@@ -98,13 +98,13 @@ html(lang='en')
                     h6 Olevia voit ajaa missä vain
                     p Kokonaisuuden luotettavuus on pitkälti alustapalvelun palvelustasosta kiinni. Olevia voit ajaa omalla alustallasi, jonka palvelutaso ja luotettavuus ovat täsmälleen tarpeeseen soveltuvalla tasolla.
                     p Huolettomuutta on se, että voit ylläpitää järjestelmiä vapaasti siellä, missä organisaatiosi muutkin tietotekniikan ratkaisut toteutetaan.
-                    
+
                     h6 Lomaile huoletta, kun asiat on etukäteen mietitty
                     p Niinpä haluamme toivottaa mukavaa kesää ja lokoisaa lomailua. Ole meihin yhteydessä sivun oikean yläreunan painikkeella heti lomasi jälkeen ja aletaan rakentaa teillekin tunnistusratkaisua, joka mahdollistaa lokoisan lomailun seuraavalla lomakaudella.
-                    h6.mt-5 
+                    h6.mt-5
                         u Lisätietoa: Olevi
                     p Olevi on kertakirjautumisen toteuttava standardeihin perustuva OIDC/SAML2 tunnistusratkaisu. Olevi tekee kirjautumisesta helppoa loppukäyttäjille ja asiakkaille. Olevi perustuu avoimen lähdekoodin Shibboleth IdP -tuotteeseen.
-                    p 
+                    p
                         a(href='https://www.olevi.fi') www.olevi.fi
 
         // Footer
@@ -120,13 +120,10 @@ html(lang='en')
                     //-a(href='#!') Terms
                     //-span.mx-1 &middot;
                     //-a(href='#!') FAQ
-        
+
         include ../includes/feedback-modal.pug
 
-        script(src='https://misc.olevi.fi/assets/js/jquery.min.js')
-        // Bootstrap core JS
-        //script(src='/js/popper.min.js')
-        script(src='https://misc.olevi.fi/assets/js/bootstrap.bundle.min.js')
+        include ../includes/scripts.pug
 
         // Core theme JS
         script(src='/js/scripts.js')

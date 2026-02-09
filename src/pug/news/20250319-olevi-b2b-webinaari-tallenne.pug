@@ -38,7 +38,7 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto.me-4.my-3.my-lg-0
                         li.nav-item
-                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/') 
+                            a.nav-link.me-lg-3(href='https://test-idp.olevi.fi/mgmforms/')
                                 i.bi-box-arrow-up-right &nbsp; Demo
                         li.nav-item
                             div.dropdown
@@ -89,17 +89,17 @@ html(lang='en')
                     ul
                         li Kuinka määritellä ja hallita käyttäjärooleja sopimusperusteisesti
                         li Miten ERP- ja CRM-integraatiot edistävät automaatiota
-                        li Parhaat käytännöt tilausten hyväksyntäprosessien ja käyttöoikeuksien hallintaan                        
-                    h6.mt-5 
+                        li Parhaat käytännöt tilausten hyväksyntäprosessien ja käyttöoikeuksien hallintaan
+                    h6.mt-5
                         u Lisätietoa: Olevi
                     p Olevi on kertakirjautumisen toteuttava standardeihin perustuva OIDC/SAML2 tunnistusratkaisu. Olevi tekee kirjautumisesta helppoa loppukäyttäjille ja asiakkaille. Olevi perustuu avoimen lähdekoodin Shibboleth IdP -tuotteeseen.
-                    p Lisätietoa: 
+                    p Lisätietoa:
                         a(href='https://www.olevi.fi') www.olevi.fi
                     h6.mt-5
                         u About Vorna ID
                     p As a trustful ecosystem Vorna connects online services with potential and existing customers and distributors enabling clear and unique identification of legal entities engaging in business transactions.
                     p Furthermore, Vorna ID serves online service providers – you simply implement the modular service in line with your requirements – from simple login and identification procedures to self-service business partner user administration. You benefit from simpler and continuous online processes.
-                    p Find out more at 
+                    p Find out more at
                         a(href='https://vornaid.com/') vornaid.com
 
         // Footer
@@ -115,13 +115,10 @@ html(lang='en')
                     //-a(href='#!') Terms
                     //-span.mx-1 &middot;
                     //-a(href='#!') FAQ
-        
+
         include ../includes/feedback-modal.pug
 
-        script(src='https://misc.olevi.fi/assets/js/jquery.min.js')
-        // Bootstrap core JS
-        //script(src='/js/popper.min.js')
-        script(src='https://misc.olevi.fi/assets/js/bootstrap.bundle.min.js')
+        include ../includes/scripts.pug
 
         // Core theme JS
         script(src='/js/scripts.js')
