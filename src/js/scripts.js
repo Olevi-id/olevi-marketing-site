@@ -28,9 +28,6 @@ window.addEventListener('DOMContentLoaded', ()  => {
 
 });
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
 const submitButton = document.getElementById('submitButton');
 const messageTextarea = document.getElementById('message');
 const contactModalText = document.getElementById('contactModalText');
@@ -66,7 +63,7 @@ if (submitButton) {
             body: new URLSearchParams({
                 message: messageValue,
                 flavor: 'olevi'
-            })
+            }).toString()
         })
         .then(response => {
             if (!response.ok) {
