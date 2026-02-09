@@ -2,4 +2,6 @@
 
 import renderAssets from './render-assets.js';
 
-renderAssets();
+(async () => {
+    await renderAssets();
+})();
