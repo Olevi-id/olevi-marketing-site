@@ -2,6 +2,7 @@
     "title": "Olevi Marketing Site",
     "name": "olevi-marketing-site",
     "version": "6.0.7",
+    "type": "module",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
@@ -48,7 +49,6 @@
         "prettier": "2.8.6",
         "pug": "^3.0.3",
         "sass": "1.60.0",
-        "shelljs": "0.8.5",
         "upath": "2.0.1"
     }
 }

@@ -2,7 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 import pug from 'pug';
-import sh from 'shelljs';
 import prettier from 'prettier';
 import { fileURLToPath } from 'url';
 
@@ -21,8 +20,8 @@ export default function renderPug(filePath) {
     });
 
     const destPathDirname = path.dirname(destPath);
-    if (!sh.test('-e', destPathDirname)) {
-        sh.mkdir('-p', destPathDirname);
+    if (!fs.existsSync(destPathDirname)) {
+        fs.mkdirSync(destPathDirname, { recursive: true });
     }
 
     const prettified = prettier.format(html, {

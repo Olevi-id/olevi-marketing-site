@@ -1,4 +1,4 @@
-import sh from 'shelljs';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -7,5 +7,7 @@ const __dirname = path.dirname(__filename);
 
 const destPath = path.resolve(__dirname, '../dist');
 
-sh.rm('-rf', `${destPath}/*`)
+if (fs.existsSync(destPath)) {
+    fs.rmSync(destPath, { recursive: true, force: true });
+}
 

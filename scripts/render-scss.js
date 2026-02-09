@@ -4,7 +4,6 @@ import fs from 'fs';
 import path from 'path';
 import postcss from 'postcss';
 import sass from 'sass';
-import sh from 'shelljs';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,8 +21,8 @@ export default function renderSCSS() {
     const compiledCss = results.css;
 
     const destPathDirname = path.dirname(destPath);
-    if (!sh.test('-e', destPathDirname)) {
-        sh.mkdir('-p', destPathDirname);
+    if (!fs.existsSync(destPathDirname)) {
+        fs.mkdirSync(destPathDirname, { recursive: true });
     }
 
     postcss([ autoprefixer ]).process(compiledCss, {from: 'styles.css', to: 'styles.css'}).then(result => {
